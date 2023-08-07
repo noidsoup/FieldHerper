@@ -2,6 +2,7 @@ import { Link, RouteProp, useRoute } from "@react-navigation/native"
 import React, { FC, ReactElement, useEffect, useRef, useState } from "react"
 import {
   Dimensions,
+  Button,
   FlatList,
   Image,
   ImageStyle,
@@ -163,21 +164,31 @@ export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
     const $drawerInsets = useSafeAreaInsetsStyle(["top"])
 
     const [notes, setNotes] = useState([]);
+    const [title, setTitle] = useState('');
 
     useEffect(() => {
       firebase.firestore()
         .collection("collection")
         .onSnapshot((snapshot) => {
-          const newNotes = [];
+          const newcollection = [];
           snapshot.forEach((doc) => {
             const { notes, title } = doc.data();
-            newNotes.push({notes, title, id: doc.id});
+            newcollection.push({notes, title, id: doc.id});
           });
   
-          setNotes(newNotes);
+          setNotes(newcollection);
         });
   
     }, []);
+
+    const handleAdd = () => { 
+      firebase.firestore()
+        .collection("collection")
+        .add({ title, notes })
+        .catch((error) => {
+          alert(error);
+        })
+    }
 
     return (
       <DrawerLayout
@@ -226,6 +237,7 @@ export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
             renderItem={({ item }) => <Text>{item.title }</Text>}
             keyExtractor={item => item.id}
           />
+          <Button title="Add" onPress={handleAdd} />
         </Screen>
       </DrawerLayout>
     )
