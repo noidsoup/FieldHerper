@@ -20,8 +20,11 @@ import { colors, spacing } from "../../theme"
 import { useSafeAreaInsetsStyle } from "../../utils/useSafeAreaInsetsStyle"
 import * as Demos from "./demos"
 import { DrawerIconButton } from "./DrawerIconButton"
+import { firebase } from '../../firebase/firebaseConfig.js'
 
 const logo = require("../../../assets/images/logo.png")
+
+
 
 export interface Demo {
   name: string
@@ -49,7 +52,7 @@ const WebListItem: FC<DemoListItem> = ({ item, sectionIndex }) => {
   return (
     <View>
       <Link to={`/showroom/${sectionSlug}`} style={$menuContainer}>
-        <Text preset="bold">{item.name}</Text>
+        <Text preset="bold">ddd{item.name}</Text>
       </Link>
       {item.useCases.map((u) => {
         const itemSlug = slugify(u)
@@ -159,6 +162,23 @@ export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
 
     const $drawerInsets = useSafeAreaInsetsStyle(["top"])
 
+    const [notes, setNotes] = useState([]);
+
+    useEffect(() => {
+      firebase.firestore()
+        .collection("collection")
+        .onSnapshot((snapshot) => {
+          const newNotes = [];
+          snapshot.forEach((doc) => {
+            const { notes, title } = doc.data();
+            newNotes.push({notes, title, id: doc.id});
+          });
+  
+          setNotes(newNotes);
+        });
+  
+    }, []);
+
     return (
       <DrawerLayout
         ref={drawerRef}
@@ -201,29 +221,10 @@ export const DemoShowroomScreen: FC<DemoTabScreenProps<"DemoShowroom">> =
         <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$screenContainer}>
           <DrawerIconButton onPress={toggleDrawer} {...{ open, progress }} />
 
-          <SectionList
-            ref={listRef}
-            contentContainerStyle={$sectionListContentContainer}
-            stickySectionHeadersEnabled={false}
-            sections={Object.values(Demos)}
-            renderItem={({ item }) => item}
-            renderSectionFooter={() => <View style={$demoUseCasesSpacer} />}
-            ListHeaderComponent={
-              <View style={$heading}>
-                <Text preset="heading" tx="demoShowroomScreen.jumpStart" />
-              </View>
-            }
-            onScrollToIndexFailed={scrollToIndexFailed}
-            renderSectionHeader={({ section }) => {
-              return (
-                <View>
-                  <Text preset="heading" style={$demoItemName}>
-                    {section.name}
-                  </Text>
-                  <Text style={$demoItemDescription}>{section.description}</Text>
-                </View>
-              )
-            }}
+          <FlatList
+            data={notes}
+            renderItem={({ item }) => <Text>{item.title }</Text>}
+            keyExtractor={item => item.id}
           />
         </Screen>
       </DrawerLayout>
