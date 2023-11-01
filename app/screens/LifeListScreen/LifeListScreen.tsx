@@ -51,8 +51,12 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
       <View style={[$headerSearch]}>
         <TextField
           placeholder="Name, Species..."
-          LeftAccessory={() => <Icon icon="search" />}
-          RightAccessory={() => <Icon icon="tune" />}
+          LeftAccessory={() => (
+            <Icon icon="search" color={colors.palette.neutral500} style={[$headerSearchIcon]} />
+          )}
+          RightAccessory={() => (
+            <Icon icon="tune" color={colors.palette.neutral500} style={[$headerFilterIcon]} />
+          )}
           inputWrapperStyle={{ alignItems: "center" }}
         />
       </View>
@@ -77,4 +81,16 @@ const $headerSearch: ViewStyle = {
   backgroundColor: colors.palette.neutral800,
   paddingHorizontal: spacing.md,
   paddingBottom: spacing.md,
+}
+
+const $headerSearchIcon: ViewStyle = {
+  width: 20,
+  height: 20,
+  marginLeft: spacing.sm,
+}
+
+const $headerFilterIcon: ViewStyle = {
+  width: 24,
+  height: 24,
+  marginRight: spacing.sm,
 }
