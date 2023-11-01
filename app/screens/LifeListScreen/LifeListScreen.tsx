@@ -2,7 +2,7 @@ import { AppStackScreenProps } from "app/navigators"
 import React, { FC, useEffect, useRef, useState } from "react"
 import { FlatList, View, ViewStyle } from "react-native"
 
-import { Button, Header, Icon, Screen, Text } from "../../components"
+import { Button, Header, Icon, Screen, Text, TextField } from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
 import { colors, spacing } from "../../theme"
 
@@ -35,7 +35,7 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
   }, [])
 
   return (
-    <>
+    <Screen preset="fixed" statusBarStyle="dark">
       <Header
         title="My Life List"
         RightActionComponent={
@@ -48,20 +48,21 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
           />
         }
       />
-      <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$container}>
-        <View>
-          <Text>Counter goes here</Text>
-        </View>
-
-        <Button title="+ Add" onPress={() => navigation.navigate("AddItems")} />
-
-        <FlatList
-          data={lifelist}
-          renderItem={({ item }) => <Text>{item.title}</Text>}
-          keyExtractor={(item) => item.id}
+      <View style={[$headerSearch]}>
+        <TextField
+          placeholder="Name, Species..."
+          LeftAccessory={() => <Icon icon="search" />}
+          RightAccessory={() => <Icon icon="tune" />}
+          inputWrapperStyle={{ alignItems: "center" }}
         />
-      </Screen>
-    </>
+      </View>
+
+      <FlatList
+        data={lifelist}
+        renderItem={({ item }) => <Text>{item.title}</Text>}
+        keyExtractor={(item) => item.id}
+      />
+    </Screen>
   )
 }
 
@@ -70,4 +71,10 @@ const $container: ViewStyle = {
   paddingBottom: spacing.xxl,
   paddingHorizontal: spacing.lg,
   height: "100%",
+}
+
+const $headerSearch: ViewStyle = {
+  backgroundColor: colors.palette.neutral800,
+  paddingHorizontal: spacing.md,
+  paddingBottom: spacing.md,
 }

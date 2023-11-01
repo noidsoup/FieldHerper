@@ -1,31 +1,31 @@
 // TODO: write documentation about fonts and typography along with guides on how to add custom fonts in own
 // markdown file and add links from here
 
-import { Platform } from "react-native"
 import {
-  SpaceGrotesk_300Light as spaceGroteskLight,
-  SpaceGrotesk_400Regular as spaceGroteskRegular,
-  SpaceGrotesk_500Medium as spaceGroteskMedium,
-  SpaceGrotesk_600SemiBold as spaceGroteskSemiBold,
-  SpaceGrotesk_700Bold as spaceGroteskBold,
-} from "@expo-google-fonts/space-grotesk"
+  Inter_700Bold as interBold,
+  Inter_300Light as interLight,
+  Inter_500Medium as interMedium,
+  Inter_400Regular as interRegular,
+  Inter_600SemiBold as interSemiBold,
+} from "@expo-google-fonts/inter"
+import { Platform } from "react-native"
 
 export const customFontsToLoad = {
-  spaceGroteskLight,
-  spaceGroteskRegular,
-  spaceGroteskMedium,
-  spaceGroteskSemiBold,
-  spaceGroteskBold,
+  interLight,
+  interRegular,
+  interMedium,
+  interSemiBold,
+  interBold,
 }
 
 const fonts = {
-  spaceGrotesk: {
+  inter: {
     // Cross-platform Google font.
-    light: "spaceGroteskLight",
-    normal: "spaceGroteskRegular",
-    medium: "spaceGroteskMedium",
-    semiBold: "spaceGroteskSemiBold",
-    bold: "spaceGroteskBold",
+    light: "interLight",
+    normal: "interRegular",
+    medium: "interMedium",
+    semiBold: "interSemiBold",
+    bold: "interBold",
   },
   helveticaNeue: {
     // iOS only font.
@@ -59,11 +59,11 @@ export const typography = {
   /**
    * The primary font. Used in most places.
    */
-  primary: fonts.spaceGrotesk,
+  primary: fonts.inter,
   /**
    * An alternate font used for perhaps titles and stuff.
    */
-  secondary: Platform.select({ ios: fonts.helveticaNeue, android: fonts.sansSerif }),
+  secondary: fonts.inter,
   /**
    * Lets get fancy with a monospace font!
    */
