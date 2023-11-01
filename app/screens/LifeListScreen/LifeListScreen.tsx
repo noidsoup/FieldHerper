@@ -1,8 +1,8 @@
 import { AppStackScreenProps } from "app/navigators"
 import React, { FC, useEffect, useRef, useState } from "react"
-import { Button, FlatList, View, ViewStyle } from "react-native"
+import { FlatList, View, ViewStyle } from "react-native"
 
-import { Header, Screen, Text } from "../../components"
+import { Button, Header, Icon, Screen, Text } from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
 import { colors, spacing } from "../../theme"
 
@@ -37,11 +37,16 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
   return (
     <>
       <Header
-        title="HerpTracker"
-        rightIcon="settings"
-        leftText="Adam"
-        rightIconColor={colors.palette.neutral900}
-        backgroundColor={colors.palette.neutral100}
+        title="My Life List"
+        RightActionComponent={
+          <Button
+            text=" Add"
+            preset="text"
+            textStyle={[{ color: colors.tint }]}
+            pressedStyle={[{ opacity: 0.75 }]}
+            LeftAccessory={(props) => <Icon icon="add" color={colors.tint} />}
+          />
+        }
       />
       <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$container}>
         <View>
