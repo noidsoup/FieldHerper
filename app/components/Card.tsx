@@ -7,6 +7,7 @@ import {
   View,
   ViewStyle,
 } from "react-native"
+
 import { colors, spacing } from "../theme"
 import { Text, TextProps } from "./Text"
 
@@ -240,15 +241,14 @@ export function Card(props: CardProps) {
 }
 
 const $containerBase: ViewStyle = {
-  borderRadius: spacing.md,
+  borderRadius: spacing.sm,
   padding: spacing.xs,
-  borderWidth: 1,
   shadowColor: colors.palette.neutral800,
-  shadowOffset: { width: 0, height: 12 },
-  shadowOpacity: 0.08,
-  shadowRadius: 12.81,
-  elevation: 16,
-  minHeight: 96,
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.15,
+  shadowRadius: 3.84,
+  elevation: 5,
+  minHeight: 166,
   flexDirection: "row",
 }
 
