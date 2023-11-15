@@ -4,20 +4,19 @@
  * Generally speaking, it will contain an auth flow (registration, login, forgot password)
  * and a "main" flow which the user will use once logged in.
  */
-import {
-  DarkTheme,
-  DefaultTheme,
-  NavigationContainer,
-} from "@react-navigation/native"
-import { createNativeStackNavigator, NativeStackScreenProps } from "@react-navigation/native-stack"
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import { DarkTheme, DefaultTheme, NavigationContainer } from "@react-navigation/native"
+import { NativeStackScreenProps, createNativeStackNavigator } from "@react-navigation/native-stack"
+import * as Screens from "app/screens"
+import { colors, spacing, typography } from "app/theme"
 import { observer } from "mobx-react-lite"
 import React from "react"
-import { useColorScheme } from "react-native"
-import * as Screens from "app/screens"
+import { TextStyle, ViewStyle, useColorScheme } from "react-native"
+import { useSafeAreaInsets } from "react-native-safe-area-context"
+
+import { Icon } from "../components"
 import Config from "../config"
-import { useStores } from "../models" // @demo remove-current-line
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
-import { colors } from "app/theme"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -33,10 +32,13 @@ import { colors } from "app/theme"
  *   https://reactnavigation.org/docs/typescript/#organizing-types
  */
 export type AppStackParamList = {
+  Home: undefined
   Welcome: undefined
   Login: undefined // @demo remove-current-line
   LifeList: undefined
   AddItems: undefined
+  FieldGuide: undefined
+  Account: undefined
   // 🔥 Your screens go here
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
@@ -51,49 +53,25 @@ export type AppStackScreenProps<T extends keyof AppStackParamList> = NativeStack
   AppStackParamList,
   T
 >
+const LifeListStack = createNativeStackNavigator()
 
-// Documentation: https://reactnavigation.org/docs/stack-navigator/
-const Stack = createNativeStackNavigator<AppStackParamList>()
-
-const AppStack = observer(function AppStack() {
-  // @demo remove-block-start
-  const {
-    authenticationStore: { isAuthenticated },
-  } = useStores()
-
-  // @demo remove-block-end
+function LifeListStackScreen() {
   return (
-    <Stack.Navigator
-      screenOptions={{ headerShown: false, navigationBarColor: colors.background }}
-      initialRouteName={isAuthenticated ? "Welcome" : "Login"} // @demo remove-current-line
-    >
-      {/* @demo remove-block-start */}
-      {isAuthenticated ? (
-        <>
-          {/* @demo remove-block-end */}
-          <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
-          {/* @demo remove-block-start */}
-          <Stack.Screen name="LifeList" component={Screens.LifeListScreen} />
-          <Stack.Screen name="AddItems" component={Screens.AddItemsScreen} />
-        </>
-      ) : (
-        <>
-          <Stack.Screen name="Login" component={Screens.LoginScreen} />
-        </>
-      )}
-      {/* @demo remove-block-end */}
-      {/** 🔥 Your screens go here */}
-      {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
-    </Stack.Navigator>
+    <LifeListStack.Navigator>
+      <LifeListStack.Screen name="LifeListMain" component={Screens.LifeListScreen} />
+      <LifeListStack.Screen name="AddItems" component={Screens.AddItemsScreen} />
+    </LifeListStack.Navigator>
   )
-})
+}
+
+const Tab = createBottomTabNavigator<AppStackParamList>()
 
 export interface NavigationProps
   extends Partial<React.ComponentProps<typeof NavigationContainer>> {}
 
 export const AppNavigator = observer(function AppNavigator(props: NavigationProps) {
   const colorScheme = useColorScheme()
-
+  const { bottom } = useSafeAreaInsets()
   useBackButtonHandler((routeName) => exitRoutes.includes(routeName))
 
   return (
@@ -102,7 +80,90 @@ export const AppNavigator = observer(function AppNavigator(props: NavigationProp
       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
       {...props}
     >
-      <AppStack />
+      <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarHideOnKeyboard: true,
+          tabBarStyle: [$tabBar, { height: bottom + 70 }],
+          tabBarActiveTintColor: colors.text,
+          tabBarInactiveTintColor: colors.text,
+          tabBarLabelStyle: $tabBarLabel,
+          tabBarItemStyle: $tabBarItem,
+        }}
+      >
+        <Tab.Screen
+          name="Home"
+          component={Screens.HomeScreen}
+          options={{
+            tabBarLabel: "Home",
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                icon={focused ? "homeFilled" : "home"}
+                color={focused && colors.tint}
+                size={24}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="LifeList"
+          component={LifeListStackScreen}
+          options={{
+            tabBarLabel: "Life List",
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                icon={focused ? "addCheckFilled" : "addCheck"}
+                color={focused && colors.tint}
+                size={24}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="FieldGuide"
+          component={Screens.FieldGuideScreen}
+          options={{
+            tabBarLabel: "Field Guide",
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                icon={focused ? "bookFilled" : "book"}
+                color={focused && colors.tint}
+                size={24}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Account"
+          component={Screens.AccountScreen}
+          options={{
+            tabBarLabel: "Account",
+            tabBarIcon: ({ focused }) => (
+              <Icon
+                icon={focused ? "accountFilled" : "account"}
+                color={focused && colors.tint}
+                size={24}
+              />
+            ),
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   )
 })
+
+const $tabBar: ViewStyle = {
+  backgroundColor: colors.background,
+  borderTopColor: colors.palette.neutral300,
+}
+
+const $tabBarItem: ViewStyle = {
+  paddingTop: spacing.md,
+}
+
+const $tabBarLabel: TextStyle = {
+  fontSize: 12,
+  fontFamily: typography.primary.medium,
+  lineHeight: 16,
+  flex: 1,
+}

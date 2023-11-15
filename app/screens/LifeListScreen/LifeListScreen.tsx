@@ -37,7 +37,7 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
   return (
     <>
       <Header
-        title="HerpTracker"
+        title="My Life List"
         rightIcon="settings"
         leftText="Adam"
         rightIconColor={colors.palette.neutral900}

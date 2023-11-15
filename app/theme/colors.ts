@@ -4,7 +4,7 @@ const palette = {
   neutral100: "#FFFFFF",
   neutral200: "#F4F2F1",
   neutral300: "#D7CEC9",
-  neutral400: "#B6ACA6",
+  neutral400: "#CCCCCC",
   neutral500: "#978F8A",
   neutral600: "#564E4A",
   neutral700: "#3C3836",
@@ -28,7 +28,7 @@ const palette = {
   accent200: "#FFE1B2",
   accent300: "#FDD495",
   accent400: "#FBC878",
-  accent500: "#FFBB50",
+  accent500: "#6BAC00",
 
   angry100: "#F2D6CD",
   angry500: "#C03403",
@@ -59,7 +59,7 @@ export const colors = {
   /**
    * The default color of the screen background.
    */
-  background: palette.neutral200,
+  background: palette.neutral100,
   /**
    * The default border color.
    */
@@ -67,7 +67,7 @@ export const colors = {
   /**
    * The main tinting color.
    */
-  tint: palette.primary500,
+  tint: palette.accent500,
   /**
    * A subtle color used for lines.
    */
