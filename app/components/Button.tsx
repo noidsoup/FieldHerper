@@ -7,6 +7,7 @@ import {
   TextStyle,
   ViewStyle,
 } from "react-native"
+
 import { colors, spacing, typography } from "../theme"
 import { Text, TextProps } from "./Text"
 
@@ -163,6 +164,8 @@ const $viewPresets = {
     $baseViewStyle,
     { backgroundColor: colors.palette.neutral800 },
   ] as StyleProp<ViewStyle>,
+
+  text: [$baseViewStyle, { backgroundColor: "transparent", padding: 0 }] as StyleProp<ViewStyle>,
 }
 
 const $textPresets: Record<Presets, StyleProp<TextStyle>> = {

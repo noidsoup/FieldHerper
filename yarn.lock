@@ -1230,10 +1230,15 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@expo-google-fonts/space-grotesk@^0.2.2":
+"@expo-google-fonts/inter@^0.2.3":
   version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/space-grotesk/-/space-grotesk-0.2.3.tgz#f2d4fdc167d4d659b2a0d91d608e27ef9a7602f3"
-  integrity sha512-UYEMIrzegR02pauH7gVMI7j6cUroTtJug6dH/aQFjMNz0UwZe6GUcrEtJDmsUHJjEZdxbYgHhaiIwswWVo0CMA==
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/inter/-/inter-0.2.3.tgz#82bf7224bb76fc6614a00393a9e9ee4d6dd09dcb"
+  integrity sha512-iHK9FI+dnE45X5c2Z5hSFwNH4zUWethizpbv3XUn0FIGw5jwvzriENz0a6wCdkI4/d+1QkurnHo5XHti7TbNJA==
+
+"@expo-google-fonts/noto-serif@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/noto-serif/-/noto-serif-0.2.3.tgz#e8f3323c8b7bf49a0299179cb9c3d47d69cc0d6d"
+  integrity sha512-0nmybjIbhflFWUyOxB+NjVQVZxyTC3UlG4bZWOzcJ6EQO0vW3+8C1zmodRJoAbBGrbOU1iBQLC8eE1BSm9RIYw==
 
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"

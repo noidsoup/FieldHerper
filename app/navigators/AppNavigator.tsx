@@ -57,7 +57,11 @@ const LifeListStack = createNativeStackNavigator()
 
 function LifeListStackScreen() {
   return (
-    <LifeListStack.Navigator>
+    <LifeListStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <LifeListStack.Screen name="LifeListMain" component={Screens.LifeListScreen} />
       <LifeListStack.Screen name="AddItems" component={Screens.AddItemsScreen} />
     </LifeListStack.Navigator>

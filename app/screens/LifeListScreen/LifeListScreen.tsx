@@ -1,11 +1,12 @@
 import { AppStackScreenProps } from "app/navigators"
 import React, { FC, useEffect, useRef, useState } from "react"
-import { Button, FlatList, View, ViewStyle } from "react-native"
+import { FlatList, Image, View, ViewStyle } from "react-native"
 
-import { Header, Screen, Text } from "../../components"
+import { Button, Header, Icon, Screen, Text, TextField } from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
-import { colors, spacing } from "../../theme"
+import { colors, spacing, typography } from "../../theme"
 
+const placeholderImage = require("../../../assets/images/placeholder.png")
 interface LifeListScreenProps extends AppStackScreenProps<"LifeList"> {}
 
 export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_props) {
@@ -35,34 +36,116 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
   }, [])
 
   return (
-    <>
+    <Screen preset="fixed" statusBarStyle="dark">
       <Header
         title="My Life List"
-        rightIcon="settings"
-        leftText="Adam"
-        rightIconColor={colors.palette.neutral900}
-        backgroundColor={colors.palette.neutral100}
+        RightActionComponent={
+          <Button
+            text=" Add"
+            preset="text"
+            textStyle={[{ color: colors.tint }]}
+            pressedStyle={[{ opacity: 0.75 }]}
+            LeftAccessory={(props) => <Icon icon="add" color={colors.tint} />}
+          />
+        }
       />
-      <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$container}>
-        <View>
-          <Text>Counter goes here</Text>
-        </View>
-
-        <Button title="+ Add" onPress={() => navigation.navigate("AddItems")} />
-
-        <FlatList
-          data={lifelist}
-          renderItem={({ item }) => <Text>{item.title}</Text>}
-          keyExtractor={(item) => item.id}
+      <View style={$headerSearch}>
+        <TextField
+          placeholder="Name, Species..."
+          LeftAccessory={() => (
+            <Icon icon="search" color={colors.palette.neutral500} style={[$headerSearchIcon]} />
+          )}
+          RightAccessory={() => (
+            <Icon icon="tune" color={colors.palette.neutral500} style={[$headerFilterIcon]} />
+          )}
+          inputWrapperStyle={{ alignItems: "center" }}
         />
-      </Screen>
-    </>
+      </View>
+
+      <FlatList
+        data={lifelist}
+        renderItem={({ item }) => (
+          <View style={$lifeListCard}>
+            <Image source={placeholderImage} style={$lifeListCardImage} />
+            <View style={$lifeListCardContent}>
+              <Text
+                text={item.title}
+                numberOfLines={1}
+                ellipsizeMode="tail"
+                style={$lifeListCardTitle}
+              />
+              <Text
+                text="Scientific Name"
+                numberOfLines={1}
+                ellipsizeMode="tail"
+                style={$lifeListCardSubtitle}
+              />
+            </View>
+          </View>
+        )}
+        keyExtractor={(item) => item.id}
+        numColumns={2}
+        horizontal={false}
+        contentContainerStyle={{
+          padding: spacing.md,
+          justifyContent: "space-between",
+        }}
+        columnWrapperStyle={{ gap: spacing.md }}
+        ItemSeparatorComponent={() => <View style={{ width: 16, height: 16 }} />}
+      />
+    </Screen>
   )
 }
 
-const $container: ViewStyle = {
-  paddingTop: spacing.lg + spacing.xl,
-  paddingBottom: spacing.xxl,
-  paddingHorizontal: spacing.lg,
-  height: "100%",
+const $headerSearch: ViewStyle = {
+  backgroundColor: colors.palette.neutral800,
+  paddingHorizontal: spacing.md,
+  paddingBottom: spacing.md,
+}
+
+const $headerSearchIcon: ViewStyle = {
+  width: 20,
+  height: 20,
+  marginLeft: spacing.sm,
+}
+
+const $headerFilterIcon: ViewStyle = {
+  width: 24,
+  height: 24,
+  marginRight: spacing.sm,
+}
+
+const $lifeListCard: ViewStyle = {
+  width: "48%",
+  borderRadius: spacing.sm,
+  backgroundColor: colors.palette.neutral100,
+  shadowColor: colors.palette.neutral900,
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.15,
+  shadowRadius: 3.84,
+  elevation: 5,
+  minHeight: 166,
+}
+
+const $lifeListCardContent: ViewStyle = {
+  padding: spacing.xs,
+  paddingBottom: spacing.sm,
+}
+
+const $lifeListCardImage: ViewStyle = {
+  width: "100%",
+  height: 120,
+  borderTopLeftRadius: spacing.sm,
+  borderTopRightRadius: spacing.sm,
+}
+
+const $lifeListCardTitle: TextStyle = {
+  fontFamily: typography.primary.medium,
+  size: 15,
+}
+
+const $lifeListCardSubtitle: TextStyle = {
+  marginTop: spacing.xxs,
+  fontStyle: "italic",
+  color: colors.palette.neutral600,
 }

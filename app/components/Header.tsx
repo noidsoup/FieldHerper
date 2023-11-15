@@ -7,6 +7,7 @@ import {
   View,
   ViewStyle,
 } from "react-native"
+
 import { isRTL, translate } from "../i18n"
 import { colors, spacing } from "../theme"
 import { ExtendedEdge, useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
@@ -262,6 +263,7 @@ const $wrapper: ViewStyle = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
+  backgroundColor: colors.palette.neutral800,
 }
 
 const $container: ViewStyle = {
@@ -270,6 +272,7 @@ const $container: ViewStyle = {
 
 const $title: TextStyle = {
   textAlign: "center",
+  color: colors.palette.neutral100,
 }
 
 const $actionTextContainer: ViewStyle = {

@@ -85,6 +85,7 @@ export function Icon(props: IconProps) {
 }
 
 export const iconRegistry = {
+  add: require("../../assets/icons/Add.png"),
   account: require("../../assets/icons/account.png"),
   accountFilled: require("../../assets/icons/accountFilled.png"),
   addCheck: require("../../assets/icons/addCheck.png"),
@@ -111,8 +112,10 @@ export const iconRegistry = {
   more: require("../../assets/icons/more.png"),
   pin: require("../../assets/icons/pin.png"),
   podcast: require("../../assets/icons/podcast.png"),
+  search: require("../../assets/icons/Search.png"),
   settings: require("../../assets/icons/settings.png"),
   slack: require("../../assets/icons/slack.png"),
+  tune: require("../../assets/icons/Tune.png"),
   view: require("../../assets/icons/view.png"),
   x: require("../../assets/icons/x.png"),
 }
