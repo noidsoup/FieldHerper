@@ -7,62 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E102B6BE2B1153F5009CAEA2 /* HerpListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102B6BD2B1153F5009CAEA2 /* HerpListApp.swift */; };
-		E102B6C02B1153F5009CAEA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102B6BF2B1153F5009CAEA2 /* ContentView.swift */; };
-		E102B6C22B1153F8009CAEA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E102B6C12B1153F8009CAEA2 /* Assets.xcassets */; };
-		E102B6C62B1153F8009CAEA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E102B6C52B1153F8009CAEA2 /* Preview Assets.xcassets */; };
-		E102B6D02B1153F9009CAEA2 /* HerpListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102B6CF2B1153F9009CAEA2 /* HerpListTests.swift */; };
-		E102B6DA2B1153F9009CAEA2 /* HerpListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102B6D92B1153F9009CAEA2 /* HerpListUITests.swift */; };
-		E102B6DC2B1153F9009CAEA2 /* HerpListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102B6DB2B1153F9009CAEA2 /* HerpListUITestsLaunchTests.swift */; };
+		E18873192B154EE200CAFBD0 /* herplistappApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18873182B154EE200CAFBD0 /* herplistappApp.swift */; };
+		E188731B2B154EE200CAFBD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188731A2B154EE200CAFBD0 /* ContentView.swift */; };
+		E188731D2B154EE500CAFBD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E188731C2B154EE500CAFBD0 /* Assets.xcassets */; };
+		E18873212B154EE500CAFBD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E18873202B154EE500CAFBD0 /* Preview Assets.xcassets */; };
+		E188732B2B154EE500CAFBD0 /* herplistappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E188732A2B154EE500CAFBD0 /* herplistappTests.swift */; };
+		E18873352B154EE500CAFBD0 /* herplistappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18873342B154EE500CAFBD0 /* herplistappUITests.swift */; };
+		E18873372B154EE500CAFBD0 /* herplistappUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18873362B154EE500CAFBD0 /* herplistappUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E102B6CC2B1153F9009CAEA2 /* PBXContainerItemProxy */ = {
+		E18873272B154EE500CAFBD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E102B6B22B1153F5009CAEA2 /* Project object */;
+			containerPortal = E188730D2B154EE100CAFBD0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E102B6B92B1153F5009CAEA2;
-			remoteInfo = HerpList;
+			remoteGlobalIDString = E18873142B154EE100CAFBD0;
+			remoteInfo = herplistapp;
 		};
-		E102B6D62B1153F9009CAEA2 /* PBXContainerItemProxy */ = {
+		E18873312B154EE500CAFBD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E102B6B22B1153F5009CAEA2 /* Project object */;
+			containerPortal = E188730D2B154EE100CAFBD0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E102B6B92B1153F5009CAEA2;
-			remoteInfo = HerpList;
+			remoteGlobalIDString = E18873142B154EE100CAFBD0;
+			remoteInfo = herplistapp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E102B6BA2B1153F5009CAEA2 /* HerpList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HerpList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E102B6BD2B1153F5009CAEA2 /* HerpListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerpListApp.swift; sourceTree = "<group>"; };
-		E102B6BF2B1153F5009CAEA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E102B6C12B1153F8009CAEA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E102B6C32B1153F8009CAEA2 /* HerpList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HerpList.entitlements; sourceTree = "<group>"; };
-		E102B6C52B1153F8009CAEA2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E102B6CB2B1153F9009CAEA2 /* HerpListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HerpListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E102B6CF2B1153F9009CAEA2 /* HerpListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerpListTests.swift; sourceTree = "<group>"; };
-		E102B6D52B1153F9009CAEA2 /* HerpListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HerpListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E102B6D92B1153F9009CAEA2 /* HerpListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerpListUITests.swift; sourceTree = "<group>"; };
-		E102B6DB2B1153F9009CAEA2 /* HerpListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerpListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E18873152B154EE100CAFBD0 /* herplistapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = herplistapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18873182B154EE200CAFBD0 /* herplistappApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herplistappApp.swift; sourceTree = "<group>"; };
+		E188731A2B154EE200CAFBD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E188731C2B154EE500CAFBD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E188731E2B154EE500CAFBD0 /* herplistapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = herplistapp.entitlements; sourceTree = "<group>"; };
+		E18873202B154EE500CAFBD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E18873262B154EE500CAFBD0 /* herplistappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = herplistappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E188732A2B154EE500CAFBD0 /* herplistappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herplistappTests.swift; sourceTree = "<group>"; };
+		E18873302B154EE500CAFBD0 /* herplistappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = herplistappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E18873342B154EE500CAFBD0 /* herplistappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herplistappUITests.swift; sourceTree = "<group>"; };
+		E18873362B154EE500CAFBD0 /* herplistappUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = herplistappUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E102B6B72B1153F5009CAEA2 /* Frameworks */ = {
+		E18873122B154EE100CAFBD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E102B6C82B1153F9009CAEA2 /* Frameworks */ = {
+		E18873232B154EE500CAFBD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E102B6D22B1153F9009CAEA2 /* Frameworks */ = {
+		E188732D2B154EE500CAFBD0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,143 +72,143 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E102B6B12B1153F5009CAEA2 = {
+		E188730C2B154EE100CAFBD0 = {
 			isa = PBXGroup;
 			children = (
-				E102B6BC2B1153F5009CAEA2 /* HerpList */,
-				E102B6CE2B1153F9009CAEA2 /* HerpListTests */,
-				E102B6D82B1153F9009CAEA2 /* HerpListUITests */,
-				E102B6BB2B1153F5009CAEA2 /* Products */,
+				E18873172B154EE100CAFBD0 /* herplistapp */,
+				E18873292B154EE500CAFBD0 /* herplistappTests */,
+				E18873332B154EE500CAFBD0 /* herplistappUITests */,
+				E18873162B154EE100CAFBD0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		E102B6BB2B1153F5009CAEA2 /* Products */ = {
+		E18873162B154EE100CAFBD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E102B6BA2B1153F5009CAEA2 /* HerpList.app */,
-				E102B6CB2B1153F9009CAEA2 /* HerpListTests.xctest */,
-				E102B6D52B1153F9009CAEA2 /* HerpListUITests.xctest */,
+				E18873152B154EE100CAFBD0 /* herplistapp.app */,
+				E18873262B154EE500CAFBD0 /* herplistappTests.xctest */,
+				E18873302B154EE500CAFBD0 /* herplistappUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E102B6BC2B1153F5009CAEA2 /* HerpList */ = {
+		E18873172B154EE100CAFBD0 /* herplistapp */ = {
 			isa = PBXGroup;
 			children = (
-				E102B6BD2B1153F5009CAEA2 /* HerpListApp.swift */,
-				E102B6BF2B1153F5009CAEA2 /* ContentView.swift */,
-				E102B6C12B1153F8009CAEA2 /* Assets.xcassets */,
-				E102B6C32B1153F8009CAEA2 /* HerpList.entitlements */,
-				E102B6C42B1153F8009CAEA2 /* Preview Content */,
+				E18873182B154EE200CAFBD0 /* herplistappApp.swift */,
+				E188731A2B154EE200CAFBD0 /* ContentView.swift */,
+				E188731C2B154EE500CAFBD0 /* Assets.xcassets */,
+				E188731E2B154EE500CAFBD0 /* herplistapp.entitlements */,
+				E188731F2B154EE500CAFBD0 /* Preview Content */,
 			);
-			path = HerpList;
+			path = herplistapp;
 			sourceTree = "<group>";
 		};
-		E102B6C42B1153F8009CAEA2 /* Preview Content */ = {
+		E188731F2B154EE500CAFBD0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				E102B6C52B1153F8009CAEA2 /* Preview Assets.xcassets */,
+				E18873202B154EE500CAFBD0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E102B6CE2B1153F9009CAEA2 /* HerpListTests */ = {
+		E18873292B154EE500CAFBD0 /* herplistappTests */ = {
 			isa = PBXGroup;
 			children = (
-				E102B6CF2B1153F9009CAEA2 /* HerpListTests.swift */,
+				E188732A2B154EE500CAFBD0 /* herplistappTests.swift */,
 			);
-			path = HerpListTests;
+			path = herplistappTests;
 			sourceTree = "<group>";
 		};
-		E102B6D82B1153F9009CAEA2 /* HerpListUITests */ = {
+		E18873332B154EE500CAFBD0 /* herplistappUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E102B6D92B1153F9009CAEA2 /* HerpListUITests.swift */,
-				E102B6DB2B1153F9009CAEA2 /* HerpListUITestsLaunchTests.swift */,
+				E18873342B154EE500CAFBD0 /* herplistappUITests.swift */,
+				E18873362B154EE500CAFBD0 /* herplistappUITestsLaunchTests.swift */,
 			);
-			path = HerpListUITests;
+			path = herplistappUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E102B6B92B1153F5009CAEA2 /* HerpList */ = {
+		E18873142B154EE100CAFBD0 /* herplistapp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E102B6DF2B1153F9009CAEA2 /* Build configuration list for PBXNativeTarget "HerpList" */;
+			buildConfigurationList = E188733A2B154EE500CAFBD0 /* Build configuration list for PBXNativeTarget "herplistapp" */;
 			buildPhases = (
-				E102B6B62B1153F5009CAEA2 /* Sources */,
-				E102B6B72B1153F5009CAEA2 /* Frameworks */,
-				E102B6B82B1153F5009CAEA2 /* Resources */,
+				E18873112B154EE100CAFBD0 /* Sources */,
+				E18873122B154EE100CAFBD0 /* Frameworks */,
+				E18873132B154EE100CAFBD0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HerpList;
-			productName = HerpList;
-			productReference = E102B6BA2B1153F5009CAEA2 /* HerpList.app */;
+			name = herplistapp;
+			productName = herplistapp;
+			productReference = E18873152B154EE100CAFBD0 /* herplistapp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E102B6CA2B1153F9009CAEA2 /* HerpListTests */ = {
+		E18873252B154EE500CAFBD0 /* herplistappTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E102B6E22B1153F9009CAEA2 /* Build configuration list for PBXNativeTarget "HerpListTests" */;
+			buildConfigurationList = E188733D2B154EE500CAFBD0 /* Build configuration list for PBXNativeTarget "herplistappTests" */;
 			buildPhases = (
-				E102B6C72B1153F9009CAEA2 /* Sources */,
-				E102B6C82B1153F9009CAEA2 /* Frameworks */,
-				E102B6C92B1153F9009CAEA2 /* Resources */,
+				E18873222B154EE500CAFBD0 /* Sources */,
+				E18873232B154EE500CAFBD0 /* Frameworks */,
+				E18873242B154EE500CAFBD0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E102B6CD2B1153F9009CAEA2 /* PBXTargetDependency */,
+				E18873282B154EE500CAFBD0 /* PBXTargetDependency */,
 			);
-			name = HerpListTests;
-			productName = HerpListTests;
-			productReference = E102B6CB2B1153F9009CAEA2 /* HerpListTests.xctest */;
+			name = herplistappTests;
+			productName = herplistappTests;
+			productReference = E18873262B154EE500CAFBD0 /* herplistappTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E102B6D42B1153F9009CAEA2 /* HerpListUITests */ = {
+		E188732F2B154EE500CAFBD0 /* herplistappUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E102B6E52B1153F9009CAEA2 /* Build configuration list for PBXNativeTarget "HerpListUITests" */;
+			buildConfigurationList = E18873402B154EE500CAFBD0 /* Build configuration list for PBXNativeTarget "herplistappUITests" */;
 			buildPhases = (
-				E102B6D12B1153F9009CAEA2 /* Sources */,
-				E102B6D22B1153F9009CAEA2 /* Frameworks */,
-				E102B6D32B1153F9009CAEA2 /* Resources */,
+				E188732C2B154EE500CAFBD0 /* Sources */,
+				E188732D2B154EE500CAFBD0 /* Frameworks */,
+				E188732E2B154EE500CAFBD0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E102B6D72B1153F9009CAEA2 /* PBXTargetDependency */,
+				E18873322B154EE500CAFBD0 /* PBXTargetDependency */,
 			);
-			name = HerpListUITests;
-			productName = HerpListUITests;
-			productReference = E102B6D52B1153F9009CAEA2 /* HerpListUITests.xctest */;
+			name = herplistappUITests;
+			productName = herplistappUITests;
+			productReference = E18873302B154EE500CAFBD0 /* herplistappUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E102B6B22B1153F5009CAEA2 /* Project object */ = {
+		E188730D2B154EE100CAFBD0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					E102B6B92B1153F5009CAEA2 = {
+					E18873142B154EE100CAFBD0 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					E102B6CA2B1153F9009CAEA2 = {
+					E18873252B154EE500CAFBD0 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = E102B6B92B1153F5009CAEA2;
+						TestTargetID = E18873142B154EE100CAFBD0;
 					};
-					E102B6D42B1153F9009CAEA2 = {
+					E188732F2B154EE500CAFBD0 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = E102B6B92B1153F5009CAEA2;
+						TestTargetID = E18873142B154EE100CAFBD0;
 					};
 				};
 			};
-			buildConfigurationList = E102B6B52B1153F5009CAEA2 /* Build configuration list for PBXProject "HerpList" */;
+			buildConfigurationList = E18873102B154EE100CAFBD0 /* Build configuration list for PBXProject "herplistapp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -216,36 +216,36 @@
 				en,
 				Base,
 			);
-			mainGroup = E102B6B12B1153F5009CAEA2;
-			productRefGroup = E102B6BB2B1153F5009CAEA2 /* Products */;
+			mainGroup = E188730C2B154EE100CAFBD0;
+			productRefGroup = E18873162B154EE100CAFBD0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E102B6B92B1153F5009CAEA2 /* HerpList */,
-				E102B6CA2B1153F9009CAEA2 /* HerpListTests */,
-				E102B6D42B1153F9009CAEA2 /* HerpListUITests */,
+				E18873142B154EE100CAFBD0 /* herplistapp */,
+				E18873252B154EE500CAFBD0 /* herplistappTests */,
+				E188732F2B154EE500CAFBD0 /* herplistappUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E102B6B82B1153F5009CAEA2 /* Resources */ = {
+		E18873132B154EE100CAFBD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102B6C62B1153F8009CAEA2 /* Preview Assets.xcassets in Resources */,
-				E102B6C22B1153F8009CAEA2 /* Assets.xcassets in Resources */,
+				E18873212B154EE500CAFBD0 /* Preview Assets.xcassets in Resources */,
+				E188731D2B154EE500CAFBD0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E102B6C92B1153F9009CAEA2 /* Resources */ = {
+		E18873242B154EE500CAFBD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E102B6D32B1153F9009CAEA2 /* Resources */ = {
+		E188732E2B154EE500CAFBD0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -255,49 +255,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E102B6B62B1153F5009CAEA2 /* Sources */ = {
+		E18873112B154EE100CAFBD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102B6C02B1153F5009CAEA2 /* ContentView.swift in Sources */,
-				E102B6BE2B1153F5009CAEA2 /* HerpListApp.swift in Sources */,
+				E188731B2B154EE200CAFBD0 /* ContentView.swift in Sources */,
+				E18873192B154EE200CAFBD0 /* herplistappApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E102B6C72B1153F9009CAEA2 /* Sources */ = {
+		E18873222B154EE500CAFBD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102B6D02B1153F9009CAEA2 /* HerpListTests.swift in Sources */,
+				E188732B2B154EE500CAFBD0 /* herplistappTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E102B6D12B1153F9009CAEA2 /* Sources */ = {
+		E188732C2B154EE500CAFBD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102B6DC2B1153F9009CAEA2 /* HerpListUITestsLaunchTests.swift in Sources */,
-				E102B6DA2B1153F9009CAEA2 /* HerpListUITests.swift in Sources */,
+				E18873352B154EE500CAFBD0 /* herplistappUITests.swift in Sources */,
+				E18873372B154EE500CAFBD0 /* herplistappUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E102B6CD2B1153F9009CAEA2 /* PBXTargetDependency */ = {
+		E18873282B154EE500CAFBD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E102B6B92B1153F5009CAEA2 /* HerpList */;
-			targetProxy = E102B6CC2B1153F9009CAEA2 /* PBXContainerItemProxy */;
+			target = E18873142B154EE100CAFBD0 /* herplistapp */;
+			targetProxy = E18873272B154EE500CAFBD0 /* PBXContainerItemProxy */;
 		};
-		E102B6D72B1153F9009CAEA2 /* PBXTargetDependency */ = {
+		E18873322B154EE500CAFBD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E102B6B92B1153F5009CAEA2 /* HerpList */;
-			targetProxy = E102B6D62B1153F9009CAEA2 /* PBXContainerItemProxy */;
+			target = E18873142B154EE100CAFBD0 /* herplistapp */;
+			targetProxy = E18873312B154EE500CAFBD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		E102B6DD2B1153F9009CAEA2 /* Debug */ = {
+		E18873382B154EE500CAFBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,7 +358,7 @@
 			};
 			name = Debug;
 		};
-		E102B6DE2B1153F9009CAEA2 /* Release */ = {
+		E18873392B154EE500CAFBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -411,22 +411,20 @@
 			};
 			name = Release;
 		};
-		E102B6E02B1153F9009CAEA2 /* Debug */ = {
+		E188733B2B154EE500CAFBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HerpList/HerpList.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = herplistapp/herplistapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HerpList/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"herplistapp/Preview Content\"";
 				DEVELOPMENT_TEAM = 7Q66RK6WBJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HerpList;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -442,9 +440,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplistapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -453,22 +450,20 @@
 			};
 			name = Debug;
 		};
-		E102B6E12B1153F9009CAEA2 /* Release */ = {
+		E188733C2B154EE500CAFBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HerpList/HerpList.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = herplistapp/herplistapp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HerpList/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"herplistapp/Preview Content\"";
 				DEVELOPMENT_TEAM = 7Q66RK6WBJ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HerpList;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -484,9 +479,8 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplistapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -495,7 +489,7 @@
 			};
 			name = Release;
 		};
-		E102B6E32B1153F9009CAEA2 /* Debug */ = {
+		E188733E2B154EE500CAFBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -507,18 +501,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.HerpListTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplistappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HerpList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HerpList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/herplistapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/herplistapp";
 			};
 			name = Debug;
 		};
-		E102B6E42B1153F9009CAEA2 /* Release */ = {
+		E188733F2B154EE500CAFBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -530,18 +524,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.HerpListTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplistappTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HerpList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HerpList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/herplistapp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/herplistapp";
 			};
 			name = Release;
 		};
-		E102B6E62B1153F9009CAEA2 /* Debug */ = {
+		E18873412B154EE500CAFBD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -552,18 +546,18 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.HerpListUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplistappUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HerpList;
+				TEST_TARGET_NAME = herplistapp;
 			};
 			name = Debug;
 		};
-		E102B6E72B1153F9009CAEA2 /* Release */ = {
+		E18873422B154EE500CAFBD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -574,57 +568,57 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.HerpListUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.herplist-app.herplistappUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = HerpList;
+				TEST_TARGET_NAME = herplistapp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E102B6B52B1153F5009CAEA2 /* Build configuration list for PBXProject "HerpList" */ = {
+		E18873102B154EE100CAFBD0 /* Build configuration list for PBXProject "herplistapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E102B6DD2B1153F9009CAEA2 /* Debug */,
-				E102B6DE2B1153F9009CAEA2 /* Release */,
+				E18873382B154EE500CAFBD0 /* Debug */,
+				E18873392B154EE500CAFBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E102B6DF2B1153F9009CAEA2 /* Build configuration list for PBXNativeTarget "HerpList" */ = {
+		E188733A2B154EE500CAFBD0 /* Build configuration list for PBXNativeTarget "herplistapp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E102B6E02B1153F9009CAEA2 /* Debug */,
-				E102B6E12B1153F9009CAEA2 /* Release */,
+				E188733B2B154EE500CAFBD0 /* Debug */,
+				E188733C2B154EE500CAFBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E102B6E22B1153F9009CAEA2 /* Build configuration list for PBXNativeTarget "HerpListTests" */ = {
+		E188733D2B154EE500CAFBD0 /* Build configuration list for PBXNativeTarget "herplistappTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E102B6E32B1153F9009CAEA2 /* Debug */,
-				E102B6E42B1153F9009CAEA2 /* Release */,
+				E188733E2B154EE500CAFBD0 /* Debug */,
+				E188733F2B154EE500CAFBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E102B6E52B1153F9009CAEA2 /* Build configuration list for PBXNativeTarget "HerpListUITests" */ = {
+		E18873402B154EE500CAFBD0 /* Build configuration list for PBXNativeTarget "herplistappUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E102B6E62B1153F9009CAEA2 /* Debug */,
-				E102B6E72B1153F9009CAEA2 /* Release */,
+				E18873412B154EE500CAFBD0 /* Debug */,
+				E18873422B154EE500CAFBD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E102B6B22B1153F5009CAEA2 /* Project object */;
+	rootObject = E188730D2B154EE100CAFBD0 /* Project object */;
 }
