@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "icon-fieldHerper@2x.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
@@ -41,6 +42,7 @@
       "size" : "256x256"
     },
     {
+      "filename" : "icon-fieldHerper.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
