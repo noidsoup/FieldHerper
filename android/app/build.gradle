@@ -113,13 +113,13 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.mycollectionapp"
+    namespace 'com.mycollectionapp'
     defaultConfig {
-        applicationId "com.mycollectionapp"
+        applicationId 'com.mycollectionapp'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
     }
 
     splits {
