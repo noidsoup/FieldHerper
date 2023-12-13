@@ -48,11 +48,13 @@
       "size" : "256x256"
     },
     {
+      "filename" : "icon-fieldHerper 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
+      "filename" : "icon-fieldHerper@2x 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
