@@ -126,7 +126,7 @@ export function Button(props: ButtonProps) {
 
 const $baseViewStyle: ViewStyle = {
   minHeight: 56,
-  borderRadius: 4,
+  borderRadius: spacing.xs,
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "row",
@@ -158,7 +158,7 @@ const $viewPresets = {
     },
   ] as StyleProp<ViewStyle>,
 
-  filled: [$baseViewStyle, { backgroundColor: colors.palette.neutral300 }] as StyleProp<ViewStyle>,
+  filled: [$baseViewStyle, { backgroundColor: colors.palette.accent500 }] as StyleProp<ViewStyle>,
 
   reversed: [
     $baseViewStyle,
@@ -170,13 +170,13 @@ const $viewPresets = {
 
 const $textPresets: Record<Presets, StyleProp<TextStyle>> = {
   default: $baseTextStyle,
-  filled: $baseTextStyle,
+  filled: [$baseTextStyle, { color: colors.palette.neutral100 }],
   reversed: [$baseTextStyle, { color: colors.palette.neutral100 }],
 }
 
 const $pressedViewPresets: Record<Presets, StyleProp<ViewStyle>> = {
   default: { backgroundColor: colors.palette.neutral200 },
-  filled: { backgroundColor: colors.palette.neutral400 },
+  filled: { backgroundColor: colors.palette.neutral800 },
   reversed: { backgroundColor: colors.palette.neutral700 },
 }
 
