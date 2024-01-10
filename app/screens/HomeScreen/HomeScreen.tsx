@@ -2,7 +2,15 @@ import { AppStackScreenProps } from "app/navigators"
 import React, { FC, useEffect, useRef, useState } from "react"
 import { TextStyle, View, ViewStyle } from "react-native"
 
-import { GuideSlider, Header, HeaderStats, Screen, Text } from "../../components"
+import {
+  Button,
+  Header,
+  HeaderStats,
+  RandomGuide,
+  RecommendedSlider,
+  Screen,
+  Text,
+} from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
 import { colors, spacing } from "../../theme"
 
@@ -22,10 +30,26 @@ export const HomeScreen: FC<HomeScreenProps> = function HomeScreen(_props) {
       <Header title="Field Herper" />
       <Screen preset="scroll" safeAreaEdges={["bottom"]} contentContainerStyle={$container}>
         <HeaderStats herpCount={74} reptileCount={65} amphibianCount={9} />
-        <GuideSlider numSlides={3} />
+        <RandomGuide />
+        <Text style={$homeHeading}>Life List</Text>
+        <Text style={$homeHeading}>Field Guide</Text>
+        <Text style={$homeHeading}>Recommended</Text>
+        <RecommendedSlider />
+        <View style={$helpButton}>
+          <Button preset="filled">Help & Feedback</Button>
+        </View>
       </Screen>
     </>
   )
 }
 
 const $container: ViewStyle = {}
+
+const $homeHeading: TextStyle = {
+  marginBottom: spacing.lg,
+  marginHorizontal: spacing.md,
+}
+
+const $helpButton: ViewStyle = {
+  padding: spacing.md,
+}
