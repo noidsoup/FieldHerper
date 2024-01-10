@@ -1,19 +1,19 @@
-/**
- * Import function triggers from their respective submodules:
- *
- * import {onCall} from "firebase-functions/v2/https";
- * import {onDocumentWritten} from "firebase-functions/v2/firestore";
- *
- * See a full list of supported triggers at https://firebase.google.com/docs/functions
- */
-
-import {onRequest} from "firebase-functions/v2/https";
+import { onRequest } from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
+import axios from 'axios';
 
-// Start writing functions
-// https://firebase.google.com/docs/functions/typescript
+export const helloWorld = onRequest(async (request, response) => {
+    try {
+        // Specify the GBIF API endpoint for species
+        const gbifSpeciesEndpoint = 'https://api.gbif.org/v1/species';
 
-// export const helloWorld = onRequest((request, response) => {
-//   logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+        // Make a GET request to the GBIF API
+        const gbifResponse = await axios.get(gbifSpeciesEndpoint);
+
+        // Extract and send the data in the response
+        response.status(200).send(gbifResponse.data);
+    } catch (error) {
+        logger.error('Error fetching species data from GBIF:', error);
+        response.status(500).send('Error fetching species data');
+    }
+});
