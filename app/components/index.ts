@@ -1,6 +1,7 @@
 export * from "./AutoImage"
 export * from "./Button"
 export * from "./Card"
+export * from "./GuideSlider"
 export * from "./Header"
 export * from "./HeaderStats"
 export * from "./Icon"
