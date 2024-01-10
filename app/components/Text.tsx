@@ -77,7 +77,7 @@ const $sizeStyles = {
   xl: { fontSize: 24, lineHeight: 34 } satisfies TextStyle,
   lg: { fontSize: 20, lineHeight: 32 } satisfies TextStyle,
   md: { fontSize: 18, lineHeight: 26 } satisfies TextStyle,
-  sm: { fontSize: 16, lineHeight: 24 } satisfies TextStyle,
+  sm: { fontSize: 15, lineHeight: 24 } satisfies TextStyle,
   xs: { fontSize: 14, lineHeight: 21 } satisfies TextStyle,
   xxs: { fontSize: 12, lineHeight: 18 } satisfies TextStyle,
   xxxs: { fontSize: 10, lineHeight: 15 } satisfies TextStyle,
@@ -93,6 +93,12 @@ const $baseStyle: StyleProp<TextStyle> = [
   { color: colors.text },
 ]
 
+const $subheadingStyle: StyleProp<TextStyle> = [
+  $sizeStyles.xxxs,
+  $fontWeightStyles.normal,
+  { textTransform: "uppercase" },
+  { letterSpacing: 0.05 },
+]
 const $presets = {
   default: $baseStyle,
 
@@ -100,7 +106,7 @@ const $presets = {
 
   heading: [$baseStyle, $sizeStyles.xxl, $fontWeightStyles.bold] as StyleProp<TextStyle>,
 
-  subheading: [$baseStyle, $sizeStyles.xxxs, $fontWeightStyles.normal] as StyleProp<TextStyle>,
+  subheading: [$subheadingStyle] as StyleProp<TextStyle>,
 
   formLabel: [$baseStyle, $fontWeightStyles.medium] as StyleProp<TextStyle>,
 

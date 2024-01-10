@@ -21,7 +21,7 @@ export const HomeScreen: FC<HomeScreenProps> = function HomeScreen(_props) {
     <>
       <Header title="Field Herper" />
       <Screen preset="scroll" safeAreaEdges={["bottom"]} contentContainerStyle={$container}>
-        <HeaderStats />
+        <HeaderStats herpCount={74} reptileCount={65} amphibianCount={9} />
         <GuideSlider numSlides={3} />
       </Screen>
     </>
