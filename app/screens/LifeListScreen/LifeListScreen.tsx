@@ -53,10 +53,10 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
         <TextField
           placeholder="Name, Species..."
           LeftAccessory={() => (
-            <Icon icon="search" color={colors.palette.neutral500} style={[$headerSearchIcon]} />
+            <Icon icon="search" color={colors.palette.neutral500} style={$headerSearchIcon} />
           )}
           RightAccessory={() => (
-            <Icon icon="tune" color={colors.palette.neutral500} style={[$headerFilterIcon]} />
+            <Icon icon="tune" color={colors.palette.neutral500} style={$headerFilterIcon} />
           )}
           inputWrapperStyle={{ alignItems: "center" }}
         />
