@@ -7,6 +7,7 @@ import {
   Header,
   HeaderStats,
   LifeListCard,
+  LifeListCategories,
   RandomGuide,
   RecommendedSlider,
   Screen,
@@ -33,7 +34,7 @@ export const HomeScreen: FC<HomeScreenProps> = function HomeScreen(_props) {
         <HeaderStats herpCount={74} reptileCount={65} amphibianCount={9} />
         <RandomGuide />
         <Text style={$homeHeading}>Life List</Text>
-        <LifeListCard title="Snakes" count={36} />
+        <LifeListCategories />
         <Text style={$homeHeading}>Field Guide</Text>
         <Text style={$homeHeading}>Recommended</Text>
         <RecommendedSlider />

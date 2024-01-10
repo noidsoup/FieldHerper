@@ -1,5 +1,5 @@
 import React from "react"
-import { Image, ImageStyle, TextStyle, View, ViewProps, ViewStyle } from "react-native"
+import { Dimensions, Image, ImageStyle, TextStyle, View, ViewProps, ViewStyle } from "react-native"
 
 import { colors, spacing, typography } from "../theme"
 import { Text } from "./Text"
@@ -10,13 +10,14 @@ export interface LifeListCardProps extends ViewProps {
   title?: string
   subtitle?: string
   count?: number
+  styleOverride?: ViewStyle
 }
 
 export function LifeListCard(props: LifeListCardProps) {
-  const { title, subtitle, count, ...ViewProps } = props
+  const { title, subtitle, count, styleOverride, ...ViewProps } = props
 
   return (
-    <View style={$lifeListCard}>
+    <View style={[$lifeListCard, styleOverride]}>
       <Image source={placeholderImage} style={$lifeListCardImage} />
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
@@ -34,8 +35,9 @@ export function LifeListCard(props: LifeListCardProps) {
   )
 }
 
+const width = Dimensions.get("window").width
 const $lifeListCard: ViewStyle = {
-  width: "48%",
+  width: width * 0.48,
   borderRadius: spacing.sm,
   backgroundColor: colors.palette.neutral100,
   shadowColor: colors.palette.neutral900,
