@@ -1,8 +1,8 @@
 import { AppStackScreenProps } from "app/navigators"
 import React, { FC, useEffect, useRef, useState } from "react"
-import { Button, FlatList, View, ViewStyle } from "react-native"
+import { TextStyle, View, ViewStyle } from "react-native"
 
-import { Header, Screen, Text } from "../../components"
+import { Header, HeaderStats, Screen, Text } from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
 import { colors, spacing } from "../../theme"
 
@@ -20,20 +20,59 @@ export const HomeScreen: FC<HomeScreenProps> = function HomeScreen(_props) {
   return (
     <>
       <Header title="Field Herper" />
-      <Screen preset="fixed" safeAreaEdges={["top"]} contentContainerStyle={$container}>
-        <View>
-          <Text>
-            I'm the main screen. Someday I'll be full of cards, and maybe even a nifty carousel!
-          </Text>
+      <Screen preset="scroll" safeAreaEdges={["bottom"]} contentContainerStyle={$container}>
+        <HeaderStats />
+        <View style={$headerStats}>
+          <View style={$stat}>
+            <Text preset="subheading" size="xs" style={$statHeading}>
+              All herps
+            </Text>
+            <Text preset="heading" size="xl" style={$statValue}>
+              0
+            </Text>
+          </View>
+          <View style={[$stat, $statMiddle]}>
+            <Text preset="subheading" size="xs" style={$statHeading}>
+              All herps
+            </Text>
+            <Text preset="heading" size="xl" style={$statValue}>
+              0
+            </Text>
+          </View>
+          <View style={$stat}>
+            <Text preset="subheading" size="xs" style={$statHeading}>
+              All herps
+            </Text>
+            <Text preset="heading" size="xl" style={$statValue}>
+              0
+            </Text>
+          </View>
         </View>
       </Screen>
     </>
   )
 }
 
-const $container: ViewStyle = {
-  paddingTop: spacing.lg + spacing.xl,
-  paddingBottom: spacing.xxl,
-  paddingHorizontal: spacing.lg,
-  height: "100%",
+const $container: ViewStyle = {}
+
+const $headerStats: ViewStyle = {
+  backgroundColor: colors.palette.neutral800,
+  flexDirection: "row",
+  justifyContent: "space-around",
+}
+
+const $stat: ViewStyle = {
+  alignItems: "center",
+  flex: 1,
+  paddingBottom: spacing.md,
+}
+
+const $statMiddle: ViewStyle = {}
+
+const $statHeading: TextStyle = {
+  color: colors.palette.neutral100,
+}
+
+const $statValue: TextStyle = {
+  color: colors.palette.neutral100,
 }
