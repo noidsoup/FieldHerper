@@ -17,6 +17,7 @@
 		9BD1B9DD8E36F2F37AA5DFD0 /* libPods-FieldHerper-FieldHerperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 014E80001BF4FCE875B807D2 /* libPods-FieldHerper-FieldHerperTests.a */; };
 		A84A56B3BBBD49E2AF225EB3 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EDB3CE40F456E8A5F6307 /* noop-file.swift */; };
 		BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE406F552862D73000A81E39 /* BootSplash.storyboard */; };
+		E1FF31A12B55F9FA00208ABC /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FF31A02B55F9FA00208ABC /* SplashScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,11 +44,11 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FieldHerper/main.m; sourceTree = "<group>"; };
 		2922BA5FB3B0D8679BD801B9 /* Pods-FieldHerper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper.release.xcconfig"; path = "Target Support Files/Pods-FieldHerper/Pods-FieldHerper.release.xcconfig"; sourceTree = "<group>"; };
 		3246F77864CF22FCDDF92922 /* libPods-FieldHerper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FieldHerper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E1F21FAC13B45A394C6C9F8 /* SplashScreen.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SplashScreen.storyboard; path = FieldHerper/SplashScreen.storyboard; sourceTree = "<group>"; };
 		8194E1E1A3BC1AD5946E6CD4 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper-FieldHerperTests.release.xcconfig"; path = "Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests.release.xcconfig"; sourceTree = "<group>"; };
 		951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-FieldHerper/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		BE406F552862D73000A81E39 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = FieldHerper/BootSplash.storyboard; sourceTree = "<group>"; };
 		D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-FieldHerper-FieldHerperTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		E1FF31A02B55F9FA00208ABC /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F28202DB8CD14599C1349ADA /* Pods-FieldHerper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper.debug.xcconfig"; path = "Target Support Files/Pods-FieldHerper/Pods-FieldHerper.debug.xcconfig"; sourceTree = "<group>"; };
 		F5E88FA09C8BF62ADDCEA8BF /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper-FieldHerperTests.debug.xcconfig"; path = "Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +101,7 @@
 				BE406F552862D73000A81E39 /* BootSplash.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				0A5EDB3CE40F456E8A5F6307 /* noop-file.swift */,
-				7E1F21FAC13B45A394C6C9F8 /* SplashScreen.storyboard */,
+				E1FF31A02B55F9FA00208ABC /* SplashScreen.storyboard */,
 			);
 			name = FieldHerper;
 			sourceTree = "<group>";
@@ -279,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */,
+				E1FF31A12B55F9FA00208ABC /* SplashScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +294,8 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"$(SRCROOT)/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-frameworks-Release-input-files.xcfilelist",
-				"$(SRCROOT)/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources-Release-input-files.xcfilelist",
+				"",
+				"",
 			);
 			inputPaths = (
 				"$(SRCROOT)/.xcode.env.local",
