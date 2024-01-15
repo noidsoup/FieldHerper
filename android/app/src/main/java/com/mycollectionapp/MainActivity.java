@@ -1,4 +1,4 @@
-package com.mycollectionapp;
+package com.fieldherper;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -19,7 +19,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "MyCollectionApp";
+    return "FieldHerper";
   }
 
   /**

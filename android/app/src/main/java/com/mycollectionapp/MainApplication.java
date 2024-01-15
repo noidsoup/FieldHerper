@@ -1,4 +1,4 @@
-package com.mycollectionapp;
+package com.fieldherper;
 
 import android.app.Application;
 import android.content.res.Configuration;
