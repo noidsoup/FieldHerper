@@ -13,11 +13,11 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2215ACBC1E62C44583DB69A9 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */; };
 		400EB2C1E1807E6CBC68B7AB /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */; };
-		70D405A2CEB2DAA6F9925D31 /* libPods-FieldHerper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 054D7571AB21C31BD9F6577D /* libPods-FieldHerper.a */; };
+		4EA0A738D60B9AF2AC92CF07 /* libPods-FieldHerper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A19B9CB48D90C9860F41EB /* libPods-FieldHerper.a */; };
+		A14FCD367D413536DC222C0A /* libPods-FieldHerper-FieldHerperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B98CD905C1EC55976C041A5 /* libPods-FieldHerper-FieldHerperTests.a */; };
 		A84A56B3BBBD49E2AF225EB3 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EDB3CE40F456E8A5F6307 /* noop-file.swift */; };
 		BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE406F552862D73000A81E39 /* BootSplash.storyboard */; };
 		E127F9992B55CE88001446AE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127F9982B55CE88001446AE /* Storyboard.storyboard */; };
-		E6DD54B8D24F72A95B0D3E46 /* libPods-FieldHerper-FieldHerperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8DADA5D4EEB634D6B65FAA /* libPods-FieldHerper-FieldHerperTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,25 +34,25 @@
 		00E356EE1AD99517003FC87E /* FieldHerperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FieldHerperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* FieldHerperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FieldHerperTests.m; sourceTree = "<group>"; };
-		054D7571AB21C31BD9F6577D /* libPods-FieldHerper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FieldHerper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5EDB3CE40F456E8A5F6307 /* noop-file.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "noop-file.swift"; path = "FieldHerper/noop-file.swift"; sourceTree = "<group>"; };
-		0E8DADA5D4EEB634D6B65FAA /* libPods-FieldHerper-FieldHerperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FieldHerper-FieldHerperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* FieldHerper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FieldHerper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FieldHerper/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = FieldHerper/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FieldHerper/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FieldHerper/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FieldHerper/main.m; sourceTree = "<group>"; };
-		5BC039EBE04F722DD0238BE0 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper-FieldHerperTests.release.xcconfig"; path = "Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests.release.xcconfig"; sourceTree = "<group>"; };
+		61F36D92C3149038856D5E06 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper-FieldHerperTests.release.xcconfig"; path = "Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B98CD905C1EC55976C041A5 /* libPods-FieldHerper-FieldHerperTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FieldHerper-FieldHerperTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71A19B9CB48D90C9860F41EB /* libPods-FieldHerper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FieldHerper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1F21FAC13B45A394C6C9F8 /* SplashScreen.storyboard */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SplashScreen.storyboard; path = FieldHerper/SplashScreen.storyboard; sourceTree = "<group>"; };
+		7FD7535BE1DCF4C66C9C1E63 /* Pods-FieldHerper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper.debug.xcconfig"; path = "Target Support Files/Pods-FieldHerper/Pods-FieldHerper.debug.xcconfig"; sourceTree = "<group>"; };
 		951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-FieldHerper/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		A02B87118CEC5188E8FFFA73 /* Pods-FieldHerper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper.release.xcconfig"; path = "Target Support Files/Pods-FieldHerper/Pods-FieldHerper.release.xcconfig"; sourceTree = "<group>"; };
+		AF96A22FC241B3E4B3D76B1F /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper-FieldHerperTests.debug.xcconfig"; path = "Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BE406F552862D73000A81E39 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = FieldHerper/BootSplash.storyboard; sourceTree = "<group>"; };
 		D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-FieldHerper-FieldHerperTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		DAAC445FB0C5EA48CB8FBE5C /* Pods-FieldHerper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper.release.xcconfig"; path = "Target Support Files/Pods-FieldHerper/Pods-FieldHerper.release.xcconfig"; sourceTree = "<group>"; };
-		DDED553168459C0B467B8857 /* Pods-FieldHerper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper.debug.xcconfig"; path = "Target Support Files/Pods-FieldHerper/Pods-FieldHerper.debug.xcconfig"; sourceTree = "<group>"; };
 		E127F9982B55CE88001446AE /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F3CBB14E5CED40D0B495D639 /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FieldHerper-FieldHerperTests.debug.xcconfig"; path = "Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6DD54B8D24F72A95B0D3E46 /* libPods-FieldHerper-FieldHerperTests.a in Frameworks */,
+				A14FCD367D413536DC222C0A /* libPods-FieldHerper-FieldHerperTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70D405A2CEB2DAA6F9925D31 /* libPods-FieldHerper.a in Frameworks */,
+				4EA0A738D60B9AF2AC92CF07 /* libPods-FieldHerper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				054D7571AB21C31BD9F6577D /* libPods-FieldHerper.a */,
-				0E8DADA5D4EEB634D6B65FAA /* libPods-FieldHerper-FieldHerperTests.a */,
+				71A19B9CB48D90C9860F41EB /* libPods-FieldHerper.a */,
+				6B98CD905C1EC55976C041A5 /* libPods-FieldHerper-FieldHerperTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,10 +170,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DDED553168459C0B467B8857 /* Pods-FieldHerper.debug.xcconfig */,
-				DAAC445FB0C5EA48CB8FBE5C /* Pods-FieldHerper.release.xcconfig */,
-				F3CBB14E5CED40D0B495D639 /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */,
-				5BC039EBE04F722DD0238BE0 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */,
+				7FD7535BE1DCF4C66C9C1E63 /* Pods-FieldHerper.debug.xcconfig */,
+				A02B87118CEC5188E8FFFA73 /* Pods-FieldHerper.release.xcconfig */,
+				AF96A22FC241B3E4B3D76B1F /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */,
+				61F36D92C3149038856D5E06 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -193,12 +193,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FieldHerperTests" */;
 			buildPhases = (
-				F86AECDC1087F592D22C0A28 /* [CP] Check Pods Manifest.lock */,
+				292746F5D5AAF118D8BC8709 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				3ADAF10D92D0D70C63A93604 /* [CP] Embed Pods Frameworks */,
-				043C022C1573EE1A925AEF83 /* [CP] Copy Pods Resources */,
+				F582B4A0DCB931E56E83DE47 /* [CP] Embed Pods Frameworks */,
+				CF18A4615697594146DE3694 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,14 +214,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FieldHerper" */;
 			buildPhases = (
-				B819FA1E48184FAE0C8BDF74 /* [CP] Check Pods Manifest.lock */,
+				9A61A10100856AB02C4B7A71 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				52658748B442579D6D1433D2 /* [CP] Embed Pods Frameworks */,
-				E7371C209FFDC8E33C30364D /* [CP] Copy Pods Resources */,
+				628294C70F651C98B33DC3DD /* [CP] Embed Pods Frameworks */,
+				5EA16DB6987EA2095732EBCD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,41 +306,46 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		043C022C1573EE1A925AEF83 /* [CP] Copy Pods Resources */ = {
+		292746F5D5AAF118D8BC8709 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FieldHerper-FieldHerperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EA16DB6987EA2095732EBCD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3ADAF10D92D0D70C63A93604 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		52658748B442579D6D1433D2 /* [CP] Embed Pods Frameworks */ = {
+		628294C70F651C98B33DC3DD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -357,7 +362,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B819FA1E48184FAE0C8BDF74 /* [CP] Check Pods Manifest.lock */ = {
+		9A61A10100856AB02C4B7A71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -379,43 +384,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E7371C209FFDC8E33C30364D /* [CP] Copy Pods Resources */ = {
+		CF18A4615697594146DE3694 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper/Pods-FieldHerper-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F86AECDC1087F592D22C0A28 /* [CP] Check Pods Manifest.lock */ = {
+		F582B4A0DCB931E56E83DE47 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FieldHerper-FieldHerperTests-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FieldHerper-FieldHerperTests/Pods-FieldHerper-FieldHerperTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -473,7 +473,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3CBB14E5CED40D0B495D639 /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */;
+			baseConfigurationReference = AF96A22FC241B3E4B3D76B1F /* Pods-FieldHerper-FieldHerperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,7 +508,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BC039EBE04F722DD0238BE0 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */;
+			baseConfigurationReference = 61F36D92C3149038856D5E06 /* Pods-FieldHerper-FieldHerperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -540,7 +540,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDED553168459C0B467B8857 /* Pods-FieldHerper.debug.xcconfig */;
+			baseConfigurationReference = 7FD7535BE1DCF4C66C9C1E63 /* Pods-FieldHerper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
@@ -578,7 +578,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAAC445FB0C5EA48CB8FBE5C /* Pods-FieldHerper.release.xcconfig */;
+			baseConfigurationReference = A02B87118CEC5188E8FFFA73 /* Pods-FieldHerper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
