@@ -17,6 +17,7 @@
 		7699B88040F8A987B510C191 /* libPods-FieldHerper-FieldHerperTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-FieldHerper-FieldHerperTests.a */; };
 		A84A56B3BBBD49E2AF225EB3 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EDB3CE40F456E8A5F6307 /* noop-file.swift */; };
 		BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE406F552862D73000A81E39 /* BootSplash.storyboard */; };
+		E127F9992B55CE88001446AE /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127F9982B55CE88001446AE /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-FieldHerper/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		BE406F552862D73000A81E39 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = FieldHerper/BootSplash.storyboard; sourceTree = "<group>"; };
 		D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-FieldHerper-FieldHerperTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		E127F9982B55CE88001446AE /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				0A5EDB3CE40F456E8A5F6307 /* noop-file.swift */,
 				7E1F21FAC13B45A394C6C9F8 /* SplashScreen.storyboard */,
+				E127F9982B55CE88001446AE /* Storyboard.storyboard */,
 			);
 			name = FieldHerper;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			files = (
 				BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E127F9992B55CE88001446AE /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
