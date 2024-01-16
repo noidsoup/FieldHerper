@@ -1,5 +1,5 @@
 {
-  "name": "field-herper",
+  "name": "herp-list",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -40,7 +40,7 @@
     "@react-navigation/native-stack": "^6.0.2",
     "apisauce": "2.1.5",
     "date-fns": "^2.29.2",
-    "expo": "~48.0.21",
+    "expo": "~49.0.21",
     "expo-application": "~5.1.1",
     "expo-constants": "~14.2.1",
     "expo-device": "~5.2.1",
