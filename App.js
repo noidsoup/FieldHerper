@@ -1,19 +1,11 @@
-// This is the entry point if you run `yarn expo:start`
-// If you run `yarn ios` or `yarn android`, it'll use ./index.js instead.
 import App from "./app/app.tsx"
 import React from "react"
-import { registerRootComponent } from "expo"
-import { Platform } from "react-native"
-import * as SplashScreen from "expo-splash-screen"
-
-SplashScreen.preventAutoHideAsync()
+import { AppRegistry } from "react-native"
+import RNBootSplash from "react-native-bootsplash"
 
 function IgniteApp() {
-  return <App hideSplashScreen={SplashScreen.hideAsync} />
+  return <App hideSplashScreen={RNBootSplash.hide} />
 }
 
-if (Platform.OS !== "web") {
-  registerRootComponent(IgniteApp)
-}
-
-export default IgniteApp
+AppRegistry.registerComponent("FieldHerper", () => IgniteApp)
+export default App

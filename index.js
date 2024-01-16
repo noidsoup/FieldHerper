@@ -1,8 +1,11 @@
-import { registerRootComponent } from 'expo';
+import App from "./app/app.tsx"
+import React from "react"
+import { AppRegistry } from "react-native"
+import RNBootSplash from "react-native-bootsplash"
 
-import App from './App';
+function IgniteApp() {
+  return <App hideSplashScreen={RNBootSplash.hide} />
+}
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+AppRegistry.registerComponent("FieldHerper", () => IgniteApp)
+export default App
