@@ -22,7 +22,7 @@ export function LifeListCard(props: LifeListCardProps) {
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
           <Text text={title} numberOfLines={1} ellipsizeMode="tail" style={$lifeListCardTitle} />
-          <Text text={count.toString()} style={$cardCount} />
+          <Text text={!!count && count.toString()} style={$cardCount} />
         </View>
         <Text
           text={subtitle}
