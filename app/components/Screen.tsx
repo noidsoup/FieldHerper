@@ -12,6 +12,7 @@ import {
   View,
   ViewStyle,
 } from "react-native"
+
 import { colors } from "../theme"
 import { ExtendedEdge, useSafeAreaInsetsStyle } from "../utils/useSafeAreaInsetsStyle"
 
@@ -36,10 +37,6 @@ interface BaseScreenProps {
    * Background color
    */
   backgroundColor?: string
-  /**
-   * Status bar setting. Defaults to dark.
-   */
-  statusBarStyle?: "light" | "dark"
   /**
    * By how much should we offset the keyboard? Defaults to 0.
    */
@@ -194,14 +191,13 @@ export function Screen(props: ScreenProps) {
     keyboardOffset = 0,
     safeAreaEdges,
     StatusBarProps,
-    statusBarStyle = "dark",
   } = props
 
   const $containerInsets = useSafeAreaInsetsStyle(safeAreaEdges)
 
   return (
     <View style={[$containerStyle, { backgroundColor }, $containerInsets]}>
-      <StatusBar style={statusBarStyle} {...StatusBarProps} />
+      <StatusBar style="dark" {...StatusBarProps} />
 
       <KeyboardAvoidingView
         behavior={isIos ? "padding" : undefined}

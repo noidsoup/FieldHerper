@@ -22,14 +22,16 @@ export function LifeListCard(props: LifeListCardProps) {
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
           <Text text={title} numberOfLines={1} ellipsizeMode="tail" style={$lifeListCardTitle} />
-          <Text text={!!count && count.toString()} style={$cardCount} />
+          {!!count && <Text text={count.toString()} style={$cardCount} />}
         </View>
-        <Text
-          text={subtitle}
-          numberOfLines={1}
-          ellipsizeMode="tail"
-          style={$lifeListCardSubtitle}
-        />
+        {subtitle && (
+          <Text
+            text={subtitle}
+            numberOfLines={1}
+            ellipsizeMode="tail"
+            style={$lifeListCardSubtitle}
+          />
+        )}
       </View>
     </View>
   )
@@ -37,7 +39,7 @@ export function LifeListCard(props: LifeListCardProps) {
 
 const width = Dimensions.get("window").width
 const $lifeListCard: ViewStyle = {
-  width: width * 0.48,
+  width: 158,
   borderRadius: spacing.sm,
   backgroundColor: colors.palette.neutral100,
   shadowColor: colors.palette.neutral900,
@@ -45,12 +47,11 @@ const $lifeListCard: ViewStyle = {
   shadowOpacity: 0.15,
   shadowRadius: 3.84,
   elevation: 5,
-  minHeight: 166,
+  marginRight: spacing.lg,
 }
 
 const $lifeListCardContent: ViewStyle = {
   padding: spacing.xs,
-  paddingBottom: spacing.sm,
 }
 
 const $lifeListCardImage: ImageStyle = {
