@@ -14,7 +14,7 @@ export interface LifeListCardProps extends ViewProps {
 }
 
 export function LifeListCard(props: LifeListCardProps) {
-  const { title, subtitle, count, styleOverride, ...ViewProps } = props
+  const { title, subtitle, count, styleOverride } = props
 
   return (
     <View style={[$lifeListCard, styleOverride]}>
@@ -22,7 +22,7 @@ export function LifeListCard(props: LifeListCardProps) {
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
           <Text text={title} numberOfLines={1} ellipsizeMode="tail" style={$lifeListCardTitle} />
-          <Text text={count} style={$cardCount} />
+          <Text text={count.toString()} style={$cardCount} />
         </View>
         <Text
           text={subtitle}
@@ -53,7 +53,7 @@ const $lifeListCardContent: ViewStyle = {
   paddingBottom: spacing.sm,
 }
 
-const $lifeListCardImage: ViewStyle = {
+const $lifeListCardImage: ImageStyle = {
   width: "100%",
   height: 120,
   borderTopLeftRadius: spacing.sm,
@@ -68,12 +68,12 @@ const $cardHeading: ViewStyle = {
 
 const $lifeListCardTitle: TextStyle = {
   fontFamily: typography.primary.medium,
-  size: 15,
+  fontSize: 15,
 }
 
 const $cardCount: TextStyle = {
   fontFamily: typography.primary.medium,
-  size: 15,
+  fontSize: 15,
   paddingLeft: spacing.xs,
 }
 
