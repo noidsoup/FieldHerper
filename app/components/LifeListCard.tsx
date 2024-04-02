@@ -9,16 +9,18 @@ const placeholderImage = require("../../assets/images/placeholder.png")
 export interface LifeListCardProps extends ViewProps {
   title?: string
   subtitle?: string
+  imageURL?: string
+  scientificName?: string
   count?: number
   styleOverride?: ViewStyle
 }
 
 export function LifeListCard(props: LifeListCardProps) {
-  const { title, subtitle, count, styleOverride } = props
+  const { title, subtitle, imageURL, count, styleOverride } = props
 
   return (
     <View style={[$lifeListCard, styleOverride]}>
-      <Image source={placeholderImage} style={$lifeListCardImage} />
+      <Image source={imageURL ? { uri: imageURL } : placeholderImage} style={$lifeListCardImage} />
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
           <Text text={title} numberOfLines={1} ellipsizeMode="tail" style={$lifeListCardTitle} />

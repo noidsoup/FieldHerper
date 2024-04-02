@@ -20,9 +20,25 @@ interface HomeScreenProps extends AppStackScreenProps<"Home"> {}
 
 export const HomeScreen: FC<HomeScreenProps> = function HomeScreen(_props) {
   const timeout = useRef<ReturnType<typeof setTimeout>>()
+  const [categories, setCategories] = useState([])
 
   useEffect(() => {
     return () => timeout.current && clearTimeout(timeout.current)
+  }, [])
+
+  useEffect(() => {
+    const unsubscribe = firebase
+      .firestore()
+      .collection("categories")
+      .onSnapshot((snapshot) => {
+        const categoriesData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setCategories(categoriesData)
+      })
+
+    return () => unsubscribe()
   }, [])
 
   const { navigation } = _props

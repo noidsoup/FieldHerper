@@ -16,7 +16,7 @@ Currently includes:
 
 ## Quick Start
 
-`yarn run expo:ios`
+`npx expo run expo:ios`
 
 The Ignite boilerplate project's structure will look similar to this:
 

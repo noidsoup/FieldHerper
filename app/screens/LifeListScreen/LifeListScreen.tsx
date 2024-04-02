@@ -27,8 +27,8 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
       .onSnapshot((snapshot) => {
         const newLifeList = []
         snapshot.forEach((doc) => {
-          const { notes, title } = doc.data()
-          newLifeList.push({ notes, title, id: doc.id })
+          const { notes, title, scientificName, imageURL } = doc.data()
+          newLifeList.push({ notes, scientificName, title, imageURL, id: doc.id })
         })
 
         setLifeList(newLifeList)
@@ -61,10 +61,15 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
           inputWrapperStyle={{ alignItems: "center" }}
         />
       </View>
-
       <FlatList
         data={lifelist}
-        renderItem={({ item }) => <LifeListCard title={item.title} subtitle="Scientific name" />}
+        renderItem={({ item }) => (
+          <LifeListCard
+            title={item.title}
+            subtitle={item.scientificName}
+            imageURL={item.imageURL}
+          />
+        )}
         keyExtractor={(item) => item.id}
         numColumns={2}
         horizontal={false}

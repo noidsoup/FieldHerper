@@ -1,21 +1,34 @@
-import { colors, spacing } from "app/theme"
-import React from "react"
-import { Dimensions, Pressable, ScrollView, View, ViewStyle } from "react-native"
-
+import React, { useState, useEffect } from "react"
+import { Dimensions, Pressable, ScrollView, View, ViewStyle, TextStyle } from "react-native"
+import { firebase } from "../firebase/firebaseConfig.js" // Ensure this path is correct
 import { Icon } from "./Icon"
 import { LifeListCard } from "./LifeListCard"
 import { Text } from "./Text"
+import { colors, spacing } from "app/theme"
 
 export function LifeListCategories() {
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    const unsubscribe = firebase
+      .firestore()
+      .collection("categories")
+      .onSnapshot((snapshot) => {
+        const categoriesData = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setCategories(categoriesData)
+      })
+
+    return () => unsubscribe() // Clean up the subscription on unmount
+  }, [])
+
   return (
     <ScrollView horizontal style={$slider}>
-      <LifeListCard title="Category" count={36} />
-      <LifeListCard title="Category" count={36} />
-      <LifeListCard title="Category" count={36} />
-      <LifeListCard title="Category" count={36} />
-      <LifeListCard title="Category" count={36} />
-      <LifeListCard title="Category" count={36} />
-      <LifeListCard title="Category" count={36} />
+      {categories.map((category) => (
+        <LifeListCard key={category.id} title={category.title} count={category.count} />
+      ))}
       <Pressable style={$searchCard}>
         {({ pressed }) => (
           <>
