@@ -63,6 +63,7 @@ function LifeListStackScreen() {
       }}
     >
       <LifeListStack.Screen name="LifeListMain" component={Screens.LifeListScreen} />
+      <LifeListStack.Screen name="SpeciesDetail" component={Screens.SpeciesDetailScreen} />
       <LifeListStack.Screen name="AddItems" component={Screens.AddItemsScreen} />
     </LifeListStack.Navigator>
   )

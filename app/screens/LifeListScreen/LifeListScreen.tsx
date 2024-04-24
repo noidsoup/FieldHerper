@@ -27,8 +27,29 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
       .onSnapshot((snapshot) => {
         const newLifeList = []
         snapshot.forEach((doc) => {
-          const { notes, title, scientificName, imageURL } = doc.data()
-          newLifeList.push({ notes, scientificName, title, imageURL, id: doc.id })
+          const {
+            genus,
+            kingdom,
+            phylum,
+            threat_statuses,
+            vernacular_names,
+            notes,
+            title,
+            scientificName,
+            imageURL,
+          } = doc.data()
+          newLifeList.push({
+            genus,
+            kingdom,
+            phylum,
+            threat_statuses,
+            vernacular_names,
+            notes,
+            scientificName,
+            title,
+            imageURL,
+            id: doc.id,
+          })
         })
 
         setLifeList(newLifeList)
@@ -65,6 +86,20 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
         data={lifelist}
         renderItem={({ item }) => (
           <LifeListCard
+            onPress={() =>
+              navigation.navigate("SpeciesDetail", {
+                id: item.id,
+                title: item.title,
+                scientificName: item.scientificName,
+                imageURL: item.imageURL,
+                notes: item.notes,
+                vernacular_names: item.vernacular_names,
+                threat_statuses: item.threat_statuses,
+                kingdom: item.kingdom,
+                phylum: item.phylum,
+                genus: item.genus,
+              })
+            }
             title={item.title}
             subtitle={item.scientificName}
             imageURL={item.imageURL}

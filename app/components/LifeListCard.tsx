@@ -1,5 +1,14 @@
 import React from "react"
-import { Dimensions, Image, ImageStyle, TextStyle, View, ViewProps, ViewStyle } from "react-native"
+import {
+  Pressable,
+  Dimensions,
+  Image,
+  ImageStyle,
+  TextStyle,
+  View,
+  ViewProps,
+  ViewStyle,
+} from "react-native"
 
 import { colors, spacing, typography } from "../theme"
 import { Text } from "./Text"
@@ -13,13 +22,20 @@ export interface LifeListCardProps extends ViewProps {
   scientificName?: string
   count?: number
   styleOverride?: ViewStyle
+  onPress?: () => void
+  genus?: string
+  kingdom?: string
+  phylum?: string
+  threat_statuses?: any[]
+  vernacular_names?: any[]
+  notes?: string
 }
 
 export function LifeListCard(props: LifeListCardProps) {
   const { title, subtitle, imageURL, count, styleOverride } = props
 
   return (
-    <View style={[$lifeListCard, styleOverride]}>
+    <Pressable style={[$lifeListCard, styleOverride]} onPress={props.onPress}>
       <Image source={imageURL ? { uri: imageURL } : placeholderImage} style={$lifeListCardImage} />
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
@@ -35,7 +51,7 @@ export function LifeListCard(props: LifeListCardProps) {
           />
         )}
       </View>
-    </View>
+    </Pressable>
   )
 }
 
