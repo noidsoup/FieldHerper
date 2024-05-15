@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { Dimensions, Pressable, ScrollView, View, ViewStyle, TextStyle } from "react-native"
+import { colors, spacing } from "app/theme"
+import React, { useEffect, useState } from "react"
+import { Dimensions, Pressable, ScrollView, TextStyle, View, ViewStyle } from "react-native"
+
 import { firebase } from "../firebase/firebaseConfig.js" // Ensure this path is correct
 import { Icon } from "./Icon"
 import { LifeListCard } from "./LifeListCard"
 import { Text } from "./Text"
-import { colors, spacing } from "app/theme"
 
 export function LifeListCategories() {
   const [categories, setCategories] = useState([])
@@ -29,7 +30,7 @@ export function LifeListCategories() {
       {categories.map((category) => (
         <LifeListCard key={category.id} title={category.title} count={category.count} />
       ))}
-      <Pressable style={$searchCard}>
+      <Pressable style={({ pressed }) => [$searchCard, pressed && $searchCardPressed]}>
         {({ pressed }) => (
           <>
             <View style={$searchIcon}>
@@ -68,6 +69,16 @@ const $searchCard: ViewStyle = {
   justifyContent: "center",
   marginRight: spacing.xl + spacing.xxs,
   padding: spacing.md,
+}
+
+const $searchCardPressed: ViewStyle = {
+  shadowOffset: {
+    width: 0,
+    height: 1,
+  },
+  shadowOpacity: 0.18,
+  shadowRadius: 1.0,
+  elevation: 1,
 }
 
 const $searchIcon: ViewStyle = {

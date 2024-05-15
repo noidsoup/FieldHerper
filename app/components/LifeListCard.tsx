@@ -1,14 +1,5 @@
 import React from "react"
-import {
-  Pressable,
-  Dimensions,
-  Image,
-  ImageStyle,
-  TextStyle,
-  View,
-  ViewProps,
-  ViewStyle,
-} from "react-native"
+import { Image, ImageStyle, Pressable, TextStyle, View, ViewProps, ViewStyle } from "react-native"
 
 import { colors, spacing, typography } from "../theme"
 import { Text } from "./Text"
@@ -35,7 +26,10 @@ export function LifeListCard(props: LifeListCardProps) {
   const { title, subtitle, imageURL, count, styleOverride } = props
 
   return (
-    <Pressable style={[$lifeListCard, styleOverride]} onPress={props.onPress}>
+    <Pressable
+      onPress={props.onPress}
+      style={({ pressed }) => [$lifeListCard, styleOverride, pressed && $lifeListCardPressed]}
+    >
       <Image source={imageURL ? { uri: imageURL } : placeholderImage} style={$lifeListCardImage} />
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
@@ -55,7 +49,6 @@ export function LifeListCard(props: LifeListCardProps) {
   )
 }
 
-const width = Dimensions.get("window").width
 const $lifeListCard: ViewStyle = {
   width: 158,
   borderRadius: spacing.sm,
@@ -64,8 +57,18 @@ const $lifeListCard: ViewStyle = {
   shadowOffset: { width: 0, height: 2 },
   shadowOpacity: 0.15,
   shadowRadius: 3.84,
-  elevation: 5,
+  elevation: 3,
   marginRight: spacing.lg,
+}
+
+const $lifeListCardPressed: ViewStyle = {
+  shadowOffset: {
+    width: 0,
+    height: 1,
+  },
+  shadowOpacity: 0.18,
+  shadowRadius: 1.0,
+  elevation: 1,
 }
 
 const $lifeListCardContent: ViewStyle = {
