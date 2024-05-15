@@ -1,5 +1,14 @@
 import React from "react"
-import { Image, ImageStyle, Pressable, TextStyle, View, ViewProps, ViewStyle } from "react-native"
+import {
+  Dimensions,
+  Image,
+  ImageStyle,
+  Pressable,
+  TextStyle,
+  View,
+  ViewProps,
+  ViewStyle,
+} from "react-native"
 
 import { colors, spacing, typography } from "../theme"
 import { Text } from "./Text"
@@ -48,9 +57,9 @@ export function LifeListCard(props: LifeListCardProps) {
     </Pressable>
   )
 }
-
+const width = Dimensions.get("window").width
 const $lifeListCard: ViewStyle = {
-  width: 158,
+  width: (width - spacing.md * 3) / 2,
   borderRadius: spacing.sm,
   backgroundColor: colors.palette.neutral100,
   shadowColor: colors.palette.neutral900,
@@ -58,7 +67,6 @@ const $lifeListCard: ViewStyle = {
   shadowOpacity: 0.15,
   shadowRadius: 3.84,
   elevation: 3,
-  marginRight: spacing.lg,
 }
 
 const $lifeListCardPressed: ViewStyle = {
@@ -89,7 +97,7 @@ const $cardHeading: ViewStyle = {
 }
 
 const $lifeListCardTitle: TextStyle = {
-  fontFamily: typography.primary.medium,
+  fontFamily: typography.primary.bold,
   fontSize: 15,
 }
 
@@ -100,7 +108,8 @@ const $cardCount: TextStyle = {
 }
 
 const $lifeListCardSubtitle: TextStyle = {
-  marginTop: spacing.xxs,
-  fontStyle: "italic",
+  fontFamily: typography.primary.regularItalic,
+  fontSize: 13,
+  lineHeight: 18,
   color: colors.palette.neutral600,
 }

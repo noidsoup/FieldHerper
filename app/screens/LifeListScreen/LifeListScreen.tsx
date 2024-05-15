@@ -1,12 +1,11 @@
 import { AppStackScreenProps } from "app/navigators"
 import React, { FC, useEffect, useRef, useState } from "react"
-import { FlatList, Image, View, ViewStyle } from "react-native"
+import { FlatList, ImageStyle, View, ViewStyle } from "react-native"
 
-import { Button, Header, Icon, LifeListCard, Screen, Text, TextField } from "../../components"
+import { Button, Header, Icon, LifeListCard, Screen, TextField } from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
-import { colors, spacing, typography } from "../../theme"
+import { colors, spacing } from "../../theme"
 
-const placeholderImage = require("../../../assets/images/placeholder.png")
 interface LifeListScreenProps extends AppStackScreenProps<"LifeList"> {}
 
 export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_props) {
@@ -66,7 +65,7 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
             preset="text"
             textStyle={[{ color: colors.tint }]}
             pressedStyle={[{ opacity: 0.75 }]}
-            LeftAccessory={(props) => <Icon icon="add" color={colors.tint} />}
+            LeftAccessory={() => <Icon icon="add" color={colors.tint} />}
           />
         }
       />
@@ -125,7 +124,7 @@ const $headerSearch: ViewStyle = {
   paddingBottom: spacing.md,
 }
 
-const $headerSearchIcon: ViewStyle = {
+const $headerSearchIcon: ImageStyle = {
   width: 20,
   height: 20,
   marginLeft: spacing.sm,
