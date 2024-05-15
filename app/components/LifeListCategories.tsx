@@ -47,8 +47,6 @@ export function LifeListCategories() {
   )
 }
 
-const width = Dimensions.get("window").width
-
 const $slider: ViewStyle = {
   paddingHorizontal: spacing.md,
   paddingBottom: spacing.lg,
