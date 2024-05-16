@@ -94,6 +94,36 @@ export const SpeciesDetailScreen: FC<SpeciesDetailScreenProps> = ({ route }) => 
             </Pressable>
           </View>
           <View style={$divider} />
+          <View style={$detailSection}>
+            <Text>
+              <Text size="xs" style={$detailSource}>
+                Sources:{" "}
+              </Text>
+              <Text size="xs" style={$detailSourceLink}>
+                GBIF
+              </Text>
+              <Icon
+                icon="newWindow"
+                size={12}
+                color={colors.palette.primary500}
+                style={$detailSourceLinkIcon}
+              />
+              <Text size="xs" style={$detailSource}>
+                {" "}
+                and{" "}
+              </Text>
+              <Text size="xs" style={$detailSourceLink}>
+                Wikipedia
+              </Text>
+              <Icon
+                icon="newWindow"
+                size={12}
+                color={colors.palette.primary500}
+                style={$detailSourceLinkIcon}
+              />
+            </Text>
+          </View>
+          <View style={$divider} />
           {/* <Text style={styles.title}>scientificName: {scientificName}</Text>
           <Text style={styles.title}>phylum: {phylum}</Text>
           <Text style={styles.title}>genus: {genus}</Text>
@@ -165,4 +195,17 @@ const $divider: ViewStyle = {
   width: "100%",
   borderBottomWidth: 1,
   borderBottomColor: colors.palette.neutral300,
+}
+
+const $detailSource: TextStyle = {
+  color: colors.palette.neutral500,
+}
+
+const $detailSourceLink: TextStyle = {
+  color: colors.palette.primary500,
+}
+
+const $detailSourceLinkIcon: ImageStyle = {
+  marginBottom: 1,
+  marginLeft: 2,
 }
