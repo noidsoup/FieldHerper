@@ -117,7 +117,7 @@ export const AppNavigator = observer(function AppNavigator(props: NavigationProp
             tabBarLabel: "Life List",
             tabBarIcon: ({ focused }) => (
               <Icon
-                icon={focused ? "addCheckFilled" : "addCheck"}
+                icon={focused ? "lifeListFilled" : "lifeList"}
                 color={focused && colors.tint}
                 size={24}
               />
@@ -131,7 +131,7 @@ export const AppNavigator = observer(function AppNavigator(props: NavigationProp
             tabBarLabel: "Field Guide",
             tabBarIcon: ({ focused }) => (
               <Icon
-                icon={focused ? "bookFilled" : "book"}
+                icon={focused ? "fieldGuideFilled" : "fieldGuide"}
                 color={focused && colors.tint}
                 size={24}
               />

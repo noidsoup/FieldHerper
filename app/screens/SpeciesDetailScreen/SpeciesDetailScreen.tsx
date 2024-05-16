@@ -24,10 +24,16 @@ interface SpeciesDetailScreenProps {
 export const SpeciesDetailScreen: FC<SpeciesDetailScreenProps> = ({ route }) => {
   const { title, scientificName, imageURL, phylum, genus, kingdom, notes } = route.params
   const [activeTab, setActiveTab] = useState("Details")
+  const [inLifeList, setInLifeList] = useState(false)
 
   // Function to handle tab press
-  const handleTabPress = (tab: string) => () => {
+  const handleTabPress = (tab: string) => {
     setActiveTab(tab)
+  }
+
+  // Function to handle add to lifelist
+  const handleAddToLifeList = () => {
+    setInLifeList(!inLifeList)
   }
 
   return (
@@ -63,14 +69,31 @@ export const SpeciesDetailScreen: FC<SpeciesDetailScreenProps> = ({ route }) => 
               <Text style={$title} size="lg">
                 {title}
               </Text>
-              <Text style={$subtitle} size="sm">
+              <Text style={$subtitle} size="xs">
                 {scientificName}
               </Text>
             </View>
-            <Pressable onPress={() => console.log("Add to lifelist")}>
-              <Icon icon="addCircle" size={24} />
+            <Pressable onPress={handleAddToLifeList}>
+              {({ pressed }) => (
+                <>
+                  {inLifeList ? (
+                    <Icon
+                      icon="checkCircleFilled"
+                      size={32}
+                      color={pressed ? colors.palette.neutral600 : colors.palette.primary500}
+                    />
+                  ) : (
+                    <Icon
+                      icon="addCircle"
+                      size={32}
+                      color={pressed ? colors.palette.neutral600 : colors.palette.neutral500}
+                    />
+                  )}
+                </>
+              )}
             </Pressable>
           </View>
+          <View style={$divider} />
           {/* <Text style={styles.title}>scientificName: {scientificName}</Text>
           <Text style={styles.title}>phylum: {phylum}</Text>
           <Text style={styles.title}>genus: {genus}</Text>
@@ -91,6 +114,7 @@ export const SpeciesDetailScreen: FC<SpeciesDetailScreenProps> = ({ route }) => 
       {activeTab === "Notes" && (
         <ScrollView contentContainerStyle={$container}>
           <Text>Notes</Text>
+          <Text>{notes}</Text>
         </ScrollView>
       )}
     </Screen>
@@ -135,4 +159,10 @@ const $title: TextStyle = {
 const $subtitle: TextStyle = {
   color: colors.palette.neutral600,
   lineHeight: 18,
+}
+
+const $divider: ViewStyle = {
+  width: "100%",
+  borderBottomWidth: 1,
+  borderBottomColor: colors.palette.neutral300,
 }
