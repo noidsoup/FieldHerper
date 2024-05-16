@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react"
-import { Image, Pressable, ScrollView, StyleSheet, TextStyle, View, ViewStyle } from "react-native"
+import { Image, ImageStyle, Pressable, ScrollView, TextStyle, View, ViewStyle } from "react-native"
 
-import { Header, Screen, Tab, Text } from "../../components"
+import { Header, Icon, Screen, Tab, Text } from "../../components"
 import { colors, spacing } from "../../theme"
 
 interface SpeciesDetailScreenProps {
@@ -27,7 +27,6 @@ export const SpeciesDetailScreen: FC<SpeciesDetailScreenProps> = ({ route }) => 
 
   // Function to handle tab press
   const handleTabPress = (tab: string) => () => {
-    console.log("tab", tab)
     setActiveTab(tab)
   }
 
@@ -38,24 +37,62 @@ export const SpeciesDetailScreen: FC<SpeciesDetailScreenProps> = ({ route }) => 
         <Tab
           text="Details"
           isActive={activeTab === "Details"}
-          onPress={handleTabPress("Details")}
+          onPress={() => handleTabPress("Details")}
         />
-        <Tab text="Range" isActive={activeTab === "Range"} onPress={handleTabPress("Range")} />
+        <Tab
+          text="Range"
+          isActive={activeTab === "Range"}
+          onPress={() => handleTabPress("Range")}
+        />
         <Tab
           text="Similar"
           isActive={activeTab === "Similar"}
-          onPress={handleTabPress("Similar")}
+          onPress={() => handleTabPress("Similar")}
         />
-        <Tab text="Notes" isActive={activeTab === "Notes"} onPress={handleTabPress("Notes")} />
+        <Tab
+          text="Notes"
+          isActive={activeTab === "Notes"}
+          onPress={() => handleTabPress("Notes")}
+        />
       </View>
-      <ScrollView contentContainerStyle={styles.container}>
-        <Image source={{ uri: imageURL }} style={styles.image} />
-        <Text style={styles.title}>scientificName: {scientificName}</Text>
-        <Text style={styles.title}>phylum: {phylum}</Text>
-        <Text style={styles.title}>genus: {genus}</Text>
-        <Text style={styles.title}>kingdom: {kingdom}</Text>
-        <Text style={styles.notes}>notes: {notes}</Text>
-      </ScrollView>
+      {activeTab === "Details" && (
+        <ScrollView contentContainerStyle={$container}>
+          <Image source={{ uri: imageURL }} style={$image} />
+          <View style={[$detailSection, $titleSection]}>
+            <View>
+              <Text style={$title} size="lg">
+                {title}
+              </Text>
+              <Text style={$subtitle} size="sm">
+                {scientificName}
+              </Text>
+            </View>
+            <Pressable onPress={() => console.log("Add to lifelist")}>
+              <Icon icon="addCircle" size={24} />
+            </Pressable>
+          </View>
+          {/* <Text style={styles.title}>scientificName: {scientificName}</Text>
+          <Text style={styles.title}>phylum: {phylum}</Text>
+          <Text style={styles.title}>genus: {genus}</Text>
+          <Text style={styles.title}>kingdom: {kingdom}</Text>
+          <Text style={styles.notes}>notes: {notes}</Text> */}
+        </ScrollView>
+      )}
+      {activeTab === "Range" && (
+        <View style={$container}>
+          <Text>Range</Text>
+        </View>
+      )}
+      {activeTab === "Similar" && (
+        <ScrollView contentContainerStyle={$container}>
+          <Text>Similar</Text>
+        </ScrollView>
+      )}
+      {activeTab === "Notes" && (
+        <ScrollView contentContainerStyle={$container}>
+          <Text>Notes</Text>
+        </ScrollView>
+      )}
     </Screen>
   )
 }
@@ -69,25 +106,33 @@ const $tabWrapper: ViewStyle = {
   paddingBottom: 0,
 }
 
-const styles = StyleSheet.create({
-  container: {
-    padding: spacing.md,
-  },
-  image: {
-    width: "100%",
-    height: 200,
-    resizeMode: "cover",
-    borderRadius: spacing.sm,
-  },
-  title: {
-    color: colors.palette.neutral700,
-    fontSize: 24,
-    fontWeight: "bold",
-    marginTop: spacing.md,
-  },
-  notes: {
-    color: colors.palette.neutral600,
-    fontSize: 16,
-    marginTop: spacing.sm,
-  },
-})
+const $container: ViewStyle = {
+  padding: spacing.md,
+}
+
+const $image: ImageStyle = {
+  width: "100%",
+  height: 200,
+  resizeMode: "cover",
+  borderRadius: spacing.sm,
+}
+
+const $detailSection: ViewStyle = {
+  paddingVertical: spacing.md,
+}
+
+const $titleSection: ViewStyle = {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  alignItems: "center",
+  columnGap: spacing.md,
+}
+
+const $title: TextStyle = {
+  fontWeight: "500",
+}
+
+const $subtitle: TextStyle = {
+  color: colors.palette.neutral600,
+  lineHeight: 18,
+}
