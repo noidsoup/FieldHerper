@@ -28,7 +28,10 @@ export function LifeListCategories() {
   return (
     <ScrollView horizontal style={$slider}>
       {categories.map((category) => (
-        <LifeListCard key={category.id} title={category.title} count={category.count} />
+        <>
+          <LifeListCard key={category.id} title={category.title} count={category.count} />
+          <View style={$spacer} />
+        </>
       ))}
       <Pressable style={({ pressed }) => [$searchCard, pressed && $searchCardPressed]}>
         {({ pressed }) => (
@@ -93,4 +96,8 @@ const $searchIcon: ViewStyle = {
 const $searchText: TextStyle = {
   color: colors.palette.neutral600,
   textAlign: "center",
+}
+
+const $spacer: ViewStyle = {
+  width: spacing.md,
 }
