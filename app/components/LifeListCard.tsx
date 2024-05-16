@@ -97,7 +97,7 @@ const $cardHeading: ViewStyle = {
 }
 
 const $lifeListCardTitle: TextStyle = {
-  fontFamily: typography.primary.bold,
+  fontFamily: typography.primary.semiBold,
   fontSize: 15,
 }
 
@@ -108,7 +108,7 @@ const $cardCount: TextStyle = {
 }
 
 const $lifeListCardSubtitle: TextStyle = {
-  fontFamily: typography.primary.regularItalic,
+  fontFamily: typography.primary.normal,
   fontSize: 13,
   lineHeight: 18,
   color: colors.palette.neutral600,
