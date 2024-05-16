@@ -237,7 +237,7 @@ function HeaderAction(props: HeaderActionProps) {
         disabled={!onPress}
         activeOpacity={0.8}
       >
-        <Text weight="medium" size="md" text={content} style={$actionText} />
+        <Text size="md" text={content} style={$actionText} />
       </TouchableOpacity>
     )
   }
@@ -272,6 +272,7 @@ const $container: ViewStyle = {
 
 const $title: TextStyle = {
   textAlign: "center",
+  fontWeight: "500",
   color: colors.palette.neutral100,
 }
 

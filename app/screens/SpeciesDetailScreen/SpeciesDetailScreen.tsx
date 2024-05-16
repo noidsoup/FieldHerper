@@ -64,29 +64,9 @@ const $tabWrapper: ViewStyle = {
   backgroundColor: colors.palette.neutral200,
   flexDirection: "row",
   justifyContent: "center",
-  columnGap: spacing.lg,
+  columnGap: spacing.xl,
   padding: spacing.sm,
   paddingBottom: 0,
-}
-const $tab: ViewStyle = {
-  paddingBottom: spacing.xs,
-  borderBottomWidth: 3,
-  borderBottomColor: "transparent",
-}
-const $tabActive: ViewStyle = {
-  borderBottomColor: colors.palette.primary500,
-}
-const $tabPressed: ViewStyle = {
-  borderBottomColor: colors.palette.neutral300,
-}
-
-const $tabText: TextStyle = {
-  fontWeight: "500",
-  letterSpacing: -0.22,
-  color: colors.palette.neutral600,
-}
-const $tabTextActive: TextStyle = {
-  color: colors.palette.neutral900,
 }
 
 const styles = StyleSheet.create({
