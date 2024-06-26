@@ -108,7 +108,7 @@ const $cardCount: TextStyle = {
 }
 
 const $lifeListCardSubtitle: TextStyle = {
-  fontFamily: typography.primary.normal,
+  fontFamily: typography.primary.italic,
   fontSize: 13,
   lineHeight: 18,
   color: colors.palette.neutral600,

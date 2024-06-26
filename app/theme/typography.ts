@@ -8,6 +8,7 @@ import {
   Inter_400Regular as interRegular,
   Inter_600SemiBold as interSemiBold,
 } from "@expo-google-fonts/inter"
+import { InterTight_400Regular_Italic as interItalic } from "@expo-google-fonts/inter-tight"
 import { Platform } from "react-native"
 
 export const customFontsToLoad = {
@@ -16,6 +17,7 @@ export const customFontsToLoad = {
   interMedium,
   interSemiBold,
   interBold,
+  interItalic,
 }
 
 const fonts = {
@@ -26,6 +28,7 @@ const fonts = {
     medium: "interMedium",
     semiBold: "interSemiBold",
     bold: "interBold",
+    italic: "interItalic",
   },
   helveticaNeue: {
     // iOS only font.
