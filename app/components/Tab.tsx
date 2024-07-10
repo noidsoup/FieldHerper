@@ -45,5 +45,5 @@ const $tabText: TextStyle = {
   color: colors.palette.neutral600,
 }
 const $tabTextActive: TextStyle = {
-  color: colors.palette.neutral900,
+  color: colors.palette.primary500,
 }

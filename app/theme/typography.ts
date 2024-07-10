@@ -8,7 +8,8 @@ import {
   Inter_400Regular as interRegular,
   Inter_600SemiBold as interSemiBold,
 } from "@expo-google-fonts/inter"
-import { InterTight_400Regular_Italic as interItalic } from "@expo-google-fonts/inter-tight"
+import { NotoSerif_400Regular as notoSerifRegular } from "@expo-google-fonts/noto-serif"
+// import { InterTight_400Regular_Italic as interItalic } from "@expo-google-fonts/inter-tight"
 import { Platform } from "react-native"
 
 export const customFontsToLoad = {
@@ -17,7 +18,7 @@ export const customFontsToLoad = {
   interMedium,
   interSemiBold,
   interBold,
-  interItalic,
+  notoSerifRegular,
 }
 
 const fonts = {
@@ -28,7 +29,6 @@ const fonts = {
     medium: "interMedium",
     semiBold: "interSemiBold",
     bold: "interBold",
-    italic: "interItalic",
   },
   helveticaNeue: {
     // iOS only font.
@@ -40,6 +40,9 @@ const fonts = {
   courier: {
     // iOS only font.
     normal: "Courier",
+  },
+  notoSerif: {
+    normal: "notoSerifRegular",
   },
   sansSerif: {
     // Android only font.
@@ -66,7 +69,7 @@ export const typography = {
   /**
    * An alternate font used for perhaps titles and stuff.
    */
-  secondary: fonts.inter,
+  secondary: fonts.notoSerif,
   /**
    * Lets get fancy with a monospace font!
    */

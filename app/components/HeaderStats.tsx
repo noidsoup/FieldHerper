@@ -1,7 +1,7 @@
 import React from "react"
-import { View, ViewProps } from "react-native"
+import { TextStyle, View, ViewProps, ViewStyle } from "react-native"
 
-import { colors, spacing } from "../theme"
+import { colors, spacing, typography } from "../theme"
 import { Text } from "./Text"
 
 export interface HeaderStatsProps extends ViewProps {
@@ -17,7 +17,7 @@ export function HeaderStats(props: HeaderStatsProps) {
         <Text preset="subheading" style={$statHeading}>
           All herps
         </Text>
-        <Text preset="heading" size="xl" style={$statValue}>
+        <Text size="xl" style={$statValue}>
           {props.herpCount ?? 0}
         </Text>
       </View>
@@ -25,7 +25,7 @@ export function HeaderStats(props: HeaderStatsProps) {
         <Text preset="subheading" style={$statHeading}>
           Reptiles
         </Text>
-        <Text preset="heading" size="xl" style={$statValue}>
+        <Text size="xl" style={$statValue}>
           {props.reptileCount ?? 0}
         </Text>
       </View>
@@ -33,7 +33,7 @@ export function HeaderStats(props: HeaderStatsProps) {
         <Text preset="subheading" style={$statHeading}>
           Amphibians
         </Text>
-        <Text preset="heading" size="xl" style={$statValue}>
+        <Text size="xl" style={$statValue}>
           {props.amphibianCount ?? 0}
         </Text>
       </View>
@@ -46,7 +46,7 @@ const $headerStats: ViewStyle = {
   flexDirection: "row",
   justifyContent: "space-around",
   paddingTop: spacing.lg,
-  paddingBottom: spacing.md,
+  paddingBottom: spacing.lg,
   marginTop: -1 * spacing.lg,
 }
 
@@ -64,8 +64,10 @@ const $statMiddle: ViewStyle = {
 
 const $statHeading: TextStyle = {
   color: colors.palette.neutral500,
+  fontFamily: typography.primary.semiBold,
 }
 
 const $statValue: TextStyle = {
   color: colors.palette.neutral100,
+  fontFamily: typography.secondary.normal,
 }

@@ -49,10 +49,16 @@ export const HomeScreen: FC<HomeScreenProps> = function HomeScreen(_props) {
       <Screen preset="scroll" contentContainerStyle={$container}>
         <HeaderStats herpCount={74} reptileCount={65} amphibianCount={9} />
         <RandomGuide />
-        <Text style={$homeHeading}>Life List</Text>
+        <Text size={"md"} style={$homeHeading}>
+          Life List
+        </Text>
         <LifeListCategories />
-        <Text style={$homeHeading}>Field Guide</Text>
-        <Text style={$homeHeading}>Recommended</Text>
+        <Text size={"md"} style={$homeHeading}>
+          Field Guide
+        </Text>
+        <Text size={"md"} style={$homeHeading}>
+          Recommended
+        </Text>
         <RecommendedSlider />
         <View style={$helpButton}>
           <Button preset="filled">Help & Feedback</Button>

@@ -95,7 +95,7 @@ const $baseStyle: StyleProp<TextStyle> = [
 
 const $subheadingStyle: StyleProp<TextStyle> = [
   $sizeStyles.xxxs,
-  $fontWeightStyles.normal,
+  $fontWeightStyles.bold,
   { textTransform: "uppercase" },
   { letterSpacing: 0.05 },
 ]
