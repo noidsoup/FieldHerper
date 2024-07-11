@@ -1,35 +1,79 @@
 import { colors, spacing } from "app/theme"
-import React, { useEffect, useState } from "react"
-import { Dimensions, Pressable, ScrollView, TextStyle, View, ViewStyle } from "react-native"
+import React from "react"
+import { Image, ImageStyle, Pressable, ScrollView, TextStyle, View, ViewStyle } from "react-native"
 
-import { firebase } from "../firebase/firebaseConfig.js" // Ensure this path is correct
 import { Icon } from "./Icon"
 import { LifeListCard } from "./LifeListCard"
 import { Text } from "./Text"
 
 export function LifeListCategories() {
-  const [categories, setCategories] = useState([])
+  const caecilianImage = (
+    <Image source={require("../../assets/images/lifelist-caecilians.webp")} style={$image} />
+  )
+  const crocodilianImage = (
+    <Image source={require("../../assets/images/lifelist-crocodilians.webp")} style={$image} />
+  )
+  const frogImage = (
+    <Image source={require("../../assets/images/lifelist-frogs.webp")} style={$image} />
+  )
+  const lizardImage = (
+    <Image source={require("../../assets/images/lifelist-lizards.webp")} style={$image} />
+  )
+  const salamanderImage = (
+    <Image source={require("../../assets/images/lifelist-salamanders.webp")} style={$image} />
+  )
+  const snakeImage = (
+    <Image source={require("../../assets/images/lifelist-snakes.webp")} style={$image} />
+  )
+  const tuataraImage = (
+    <Image source={require("../../assets/images/lifelist-tuataras.webp")} style={$image} />
+  )
+  const turtleImage = (
+    <Image source={require("../../assets/images/lifelist-turtles.webp")} style={$image} />
+  )
 
-  useEffect(() => {
-    const unsubscribe = firebase
-      .firestore()
-      .collection("categories")
-      .onSnapshot((snapshot) => {
-        const categoriesData = snapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }))
-        setCategories(categoriesData)
-      })
+  const categories = [
+    { id: 1, title: "Snakes", count: 36, image: snakeImage },
+    { id: 2, title: "Lizards", count: 23, image: lizardImage },
+    { id: 3, title: "Frogs", count: 7, image: frogImage },
+    { id: 4, title: "Turtles", count: 5, image: turtleImage },
+    { id: 5, title: "Salamanders", count: 2, image: salamanderImage },
+    { id: 6, title: "Crocodilians", count: 1, image: crocodilianImage },
+    { id: 7, title: "Caecilians", count: 0, image: caecilianImage },
+    { id: 8, title: "Tuataras", count: 0, image: tuataraImage },
+  ]
 
-    return () => unsubscribe() // Clean up the subscription on unmount
-  }, [])
+  // The categories on the homepage should probably be manually set
+  // so that we can control the labels and images
+  // But we will probably need this stuff elsewhere
+
+  // const [categories, setCategories] = useState([])
+
+  // useEffect(() => {
+  //   const unsubscribe = firebase
+  //     .firestore()
+  //     .collection("categories")
+  //     .onSnapshot((snapshot) => {
+  //       const categoriesData = snapshot.docs.map((doc) => ({
+  //         id: doc.id,
+  //         ...doc.data(),
+  //       }))
+  //       setCategories(categoriesData)
+  //     })
+
+  //   return () => unsubscribe() // Clean up the subscription on unmount
+  // }, [])
 
   return (
     <ScrollView horizontal style={$slider}>
       {categories.map((category) => (
         <>
-          <LifeListCard key={category.id} title={category.title} count={category.count} />
+          <LifeListCard
+            key={category.id}
+            title={category.title}
+            count={category.count}
+            image={category.image}
+          />
           <View style={$spacer} />
         </>
       ))}
@@ -100,4 +144,11 @@ const $searchText: TextStyle = {
 
 const $spacer: ViewStyle = {
   width: spacing.md,
+}
+
+const $image: ImageStyle = {
+  width: "100%",
+  height: 120,
+  borderTopLeftRadius: spacing.sm,
+  borderTopRightRadius: spacing.sm,
 }

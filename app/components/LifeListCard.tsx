@@ -19,6 +19,7 @@ export interface LifeListCardProps extends ViewProps {
   title?: string
   subtitle?: string
   imageURL?: string
+  image?: React.ReactNode
   scientificName?: string
   count?: number
   styleOverride?: ViewStyle
@@ -32,14 +33,20 @@ export interface LifeListCardProps extends ViewProps {
 }
 
 export function LifeListCard(props: LifeListCardProps) {
-  const { title, subtitle, imageURL, count, styleOverride } = props
+  const { title, subtitle, imageURL, image, count, styleOverride } = props
 
   return (
     <Pressable
       onPress={props.onPress}
       style={({ pressed }) => [$lifeListCard, styleOverride, pressed && $lifeListCardPressed]}
     >
-      <Image source={imageURL ? { uri: imageURL } : placeholderImage} style={$lifeListCardImage} />
+      {image && <View style={$lifeListCardImage}>{image}</View>}
+      {!image && (
+        <Image
+          source={imageURL ? { uri: imageURL } : placeholderImage}
+          style={$lifeListCardImage}
+        />
+      )}
       <View style={$lifeListCardContent}>
         <View style={$cardHeading}>
           <Text text={title} numberOfLines={1} ellipsizeMode="tail" style={$lifeListCardTitle} />
@@ -108,7 +115,7 @@ const $cardCount: TextStyle = {
 }
 
 const $lifeListCardSubtitle: TextStyle = {
-  fontFamily: typography.primary.italic,
+  // fontFamily: typography.primary.italic,
   fontSize: 13,
   lineHeight: 18,
   color: colors.palette.neutral600,

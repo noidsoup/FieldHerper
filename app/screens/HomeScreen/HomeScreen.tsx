@@ -6,7 +6,6 @@ import {
   Button,
   Header,
   HeaderStats,
-  LifeListCard,
   LifeListCategories,
   RandomGuide,
   RecommendedSlider,
@@ -14,7 +13,7 @@ import {
   Text,
 } from "../../components"
 import { firebase } from "../../firebase/firebaseConfig.js"
-import { colors, spacing } from "../../theme"
+import { spacing } from "../../theme"
 
 interface HomeScreenProps extends AppStackScreenProps<"Home"> {}
 
