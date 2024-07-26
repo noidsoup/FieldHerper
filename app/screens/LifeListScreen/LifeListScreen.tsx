@@ -88,7 +88,7 @@ export const LifeListScreen: FC<LifeListScreenProps> = function LifeListcreen(_p
             onPress={() =>
               navigation.navigate("SpeciesDetail", {
                 id: item.id,
-                title: item.title,
+                title: item.vernacular_names[0] || item.title,
                 scientificName: item.scientificName,
                 imageURL: item.imageURL,
                 notes: item.notes,
