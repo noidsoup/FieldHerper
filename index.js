@@ -5,7 +5,10 @@ import RNBootSplash from "react-native-bootsplash"
 import App from "./app/app.tsx"
 
 function IgniteApp() {
-  return <App hideSplashScreen={RNBootSplash.hide} />
+  // This causes an error:
+  // "Cannot read property 'hide' of null"
+  // return <App hideSplashScreen={RNBootSplash.hide} />
+  return <App />
 }
 
 AppRegistry.registerComponent("main", () => IgniteApp)
